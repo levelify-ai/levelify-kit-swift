@@ -1,0 +1,5479 @@
+{
+  "cases": [
+    {
+      "name": "unknown-type-placeholder",
+      "lesson": {
+        "id": "t-l1",
+        "formatVersion": 1,
+        "title": "Test lesson",
+        "symbol": "questionmark.circle",
+        "requires": {
+          "stepTypes": {
+            "multipleChoice": 1
+          }
+        },
+        "exercises": [
+          {
+            "id": "t-l1-s1",
+            "type": "multipleChoice",
+            "instruction": "Which reply should you check?",
+            "options": [
+              "Any reply that states a fact",
+              "Only replies that look wrong"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Fluent replies can still be wrong.",
+            "concepts": [
+              "verification"
+            ]
+          },
+          {
+            "id": "t-l1-sim",
+            "type": "simulation",
+            "instruction": "Run the agent loop.",
+            "explanation": "The loop stops at the approve step.",
+            "concepts": [
+              "agents"
+            ],
+            "simulationId": "agent-loop",
+            "parameters": {
+              "steps": 4
+            }
+          },
+          {
+            "id": "t-l1-s3",
+            "type": "multipleChoice",
+            "instruction": "Which reply should you check?",
+            "options": [
+              "Any reply that states a fact",
+              "Only replies that look wrong"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Fluent replies can still be wrong.",
+            "concepts": [
+              "verification"
+            ]
+          }
+        ]
+      },
+      "caps": {
+        "client": "rork-ios@4fe5be7",
+        "formatVersion": 1,
+        "stepTypes": {
+          "multipleChoice": 1,
+          "pickPrompt": 1,
+          "fillBlank": 1,
+          "buildPrompt": 1,
+          "spotProblem": 1,
+          "matchPairs": 1
+        }
+      },
+      "decode": "ok",
+      "expect": {
+        "playable": true,
+        "reason": null,
+        "steps": [
+          {
+            "id": "t-l1-s1",
+            "action": "play"
+          },
+          {
+            "id": "t-l1-sim",
+            "action": "placeholder"
+          },
+          {
+            "id": "t-l1-s3",
+            "action": "play"
+          }
+        ]
+      },
+      "note": null
+    },
+    {
+      "name": "free-write-placeholder",
+      "lesson": {
+        "id": "t-l1",
+        "formatVersion": 1,
+        "title": "Test lesson",
+        "symbol": "questionmark.circle",
+        "requires": {
+          "stepTypes": {
+            "multipleChoice": 1
+          }
+        },
+        "exercises": [
+          {
+            "id": "t-l1-s1",
+            "type": "multipleChoice",
+            "instruction": "Which reply should you check?",
+            "options": [
+              "Any reply that states a fact",
+              "Only replies that look wrong"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Fluent replies can still be wrong.",
+            "concepts": [
+              "verification"
+            ]
+          },
+          {
+            "id": "t-l1-fw",
+            "type": "freeWrite",
+            "instruction": "Write it.",
+            "explanation": "e",
+            "concepts": [
+              "role"
+            ],
+            "rubric": [
+              "Names a role"
+            ]
+          }
+        ]
+      },
+      "caps": {
+        "client": "rork-ios@4fe5be7",
+        "formatVersion": 1,
+        "stepTypes": {
+          "multipleChoice": 1,
+          "pickPrompt": 1,
+          "fillBlank": 1,
+          "buildPrompt": 1,
+          "spotProblem": 1,
+          "matchPairs": 1
+        }
+      },
+      "decode": "ok",
+      "expect": {
+        "playable": true,
+        "reason": null,
+        "steps": [
+          {
+            "id": "t-l1-s1",
+            "action": "play"
+          },
+          {
+            "id": "t-l1-fw",
+            "action": "placeholder"
+          }
+        ]
+      },
+      "note": null
+    },
+    {
+      "name": "newer-type-version",
+      "lesson": {
+        "id": "t-l1",
+        "formatVersion": 1,
+        "title": "Test lesson",
+        "symbol": "questionmark.circle",
+        "requires": {
+          "stepTypes": {
+            "multipleChoice": 1
+          }
+        },
+        "exercises": [
+          {
+            "id": "t-l1-s1",
+            "type": "multipleChoice",
+            "instruction": "Which reply should you check?",
+            "options": [
+              "Any reply that states a fact",
+              "Only replies that look wrong"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Fluent replies can still be wrong.",
+            "concepts": [
+              "verification"
+            ]
+          },
+          {
+            "id": "t-l1-s2",
+            "type": "multipleChoice",
+            "instruction": "Which reply should you check?",
+            "options": [
+              "Any reply that states a fact",
+              "Only replies that look wrong"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Fluent replies can still be wrong.",
+            "concepts": [
+              "verification"
+            ],
+            "typeVersion": 2
+          }
+        ]
+      },
+      "caps": {
+        "client": "rork-ios@4fe5be7",
+        "formatVersion": 1,
+        "stepTypes": {
+          "multipleChoice": 1,
+          "pickPrompt": 1,
+          "fillBlank": 1,
+          "buildPrompt": 1,
+          "spotProblem": 1,
+          "matchPairs": 1
+        }
+      },
+      "decode": "ok",
+      "expect": {
+        "playable": true,
+        "reason": null,
+        "steps": [
+          {
+            "id": "t-l1-s1",
+            "action": "play"
+          },
+          {
+            "id": "t-l1-s2",
+            "action": "placeholder"
+          }
+        ]
+      },
+      "note": null
+    },
+    {
+      "name": "malformed-steps-cost-only-themselves",
+      "lesson": {
+        "id": "t-l1",
+        "formatVersion": 1,
+        "title": "Test lesson",
+        "symbol": "questionmark.circle",
+        "requires": {
+          "stepTypes": {
+            "multipleChoice": 1
+          }
+        },
+        "exercises": [
+          {
+            "id": "t-l1-ok",
+            "type": "multipleChoice",
+            "instruction": "Which reply should you check?",
+            "options": [
+              "Any reply that states a fact",
+              "Only replies that look wrong"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Fluent replies can still be wrong.",
+            "concepts": [
+              "verification"
+            ]
+          },
+          null,
+          "not a step",
+          {
+            "type": "multipleChoice"
+          },
+          {
+            "id": "t-l1-a",
+            "type": "multipleChoice",
+            "instruction": "Which reply should you check?",
+            "options": [
+              "Any reply that states a fact",
+              "Only replies that look wrong"
+            ],
+            "answer": [
+              7
+            ],
+            "explanation": "Fluent replies can still be wrong.",
+            "concepts": [
+              "verification"
+            ]
+          },
+          {
+            "id": "t-l1-b",
+            "type": "multipleChoice",
+            "instruction": "Which reply should you check?",
+            "options": "A or B",
+            "answer": [
+              0
+            ],
+            "explanation": "Fluent replies can still be wrong.",
+            "concepts": [
+              "verification"
+            ]
+          },
+          {
+            "id": "t-l1-c",
+            "type": "multipleChoice",
+            "instruction": "Which reply should you check?",
+            "options": [
+              "Any reply that states a fact",
+              "Only replies that look wrong"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Fluent replies can still be wrong.",
+            "concepts": "verification"
+          },
+          {
+            "id": "t-l1-d",
+            "type": "simulation",
+            "instruction": "Which reply should you check?",
+            "options": [
+              {
+                "text": "rich option"
+              }
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Fluent replies can still be wrong.",
+            "concepts": [
+              "verification"
+            ]
+          }
+        ]
+      },
+      "caps": {
+        "client": "rork-ios@4fe5be7",
+        "formatVersion": 1,
+        "stepTypes": {
+          "multipleChoice": 1,
+          "pickPrompt": 1,
+          "fillBlank": 1,
+          "buildPrompt": 1,
+          "spotProblem": 1,
+          "matchPairs": 1
+        }
+      },
+      "decode": "ok",
+      "expect": {
+        "playable": true,
+        "reason": null,
+        "steps": [
+          {
+            "id": "t-l1-ok",
+            "action": "play"
+          },
+          {
+            "id": "#1",
+            "action": "placeholder"
+          },
+          {
+            "id": "#2",
+            "action": "placeholder"
+          },
+          {
+            "id": "#3",
+            "action": "placeholder"
+          },
+          {
+            "id": "t-l1-a",
+            "action": "placeholder"
+          },
+          {
+            "id": "t-l1-b",
+            "action": "placeholder"
+          },
+          {
+            "id": "t-l1-c",
+            "action": "placeholder"
+          },
+          {
+            "id": "t-l1-d",
+            "action": "placeholder"
+          }
+        ]
+      },
+      "note": null
+    },
+    {
+      "name": "format-too-new",
+      "lesson": {
+        "id": "t-l1",
+        "formatVersion": 2,
+        "title": "Test lesson",
+        "symbol": "questionmark.circle",
+        "requires": {
+          "stepTypes": {
+            "multipleChoice": 1
+          }
+        },
+        "exercises": [
+          {
+            "id": "t-l1-s1",
+            "type": "multipleChoice",
+            "instruction": "Which reply should you check?",
+            "options": [
+              "Any reply that states a fact",
+              "Only replies that look wrong"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Fluent replies can still be wrong.",
+            "concepts": [
+              "verification"
+            ]
+          }
+        ]
+      },
+      "caps": {
+        "client": "rork-ios@4fe5be7",
+        "formatVersion": 1,
+        "stepTypes": {
+          "multipleChoice": 1,
+          "pickPrompt": 1,
+          "fillBlank": 1,
+          "buildPrompt": 1,
+          "spotProblem": 1,
+          "matchPairs": 1
+        }
+      },
+      "decode": "format-too-new",
+      "expect": null
+    },
+    {
+      "name": "missing-required-type",
+      "lesson": {
+        "id": "t-l1",
+        "formatVersion": 1,
+        "title": "Test lesson",
+        "symbol": "questionmark.circle",
+        "requires": {
+          "stepTypes": {
+            "multipleChoice": 1,
+            "buildPrompt": 1
+          }
+        },
+        "exercises": [
+          {
+            "id": "t-l1-s1",
+            "type": "multipleChoice",
+            "instruction": "Which reply should you check?",
+            "options": [
+              "Any reply that states a fact",
+              "Only replies that look wrong"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Fluent replies can still be wrong.",
+            "concepts": [
+              "verification"
+            ]
+          },
+          {
+            "id": "t-l1-b",
+            "type": "buildPrompt",
+            "instruction": "Order it.",
+            "explanation": "e",
+            "concepts": [
+              "task"
+            ],
+            "tiles": [
+              "a",
+              "b"
+            ]
+          }
+        ]
+      },
+      "caps": {
+        "client": "test",
+        "formatVersion": 1,
+        "stepTypes": {
+          "multipleChoice": 1
+        }
+      },
+      "decode": "ok",
+      "expect": {
+        "playable": false,
+        "reason": "missing-step-types",
+        "steps": [
+          {
+            "id": "t-l1-s1",
+            "action": "play"
+          },
+          {
+            "id": "t-l1-b",
+            "action": "placeholder"
+          }
+        ]
+      },
+      "note": null
+    },
+    {
+      "name": "required-version-too-new",
+      "lesson": {
+        "id": "t-l1",
+        "formatVersion": 1,
+        "title": "Test lesson",
+        "symbol": "questionmark.circle",
+        "requires": {
+          "stepTypes": {
+            "multipleChoice": 2
+          }
+        },
+        "exercises": [
+          {
+            "id": "t-l1-s1",
+            "type": "multipleChoice",
+            "instruction": "Which reply should you check?",
+            "options": [
+              "Any reply that states a fact",
+              "Only replies that look wrong"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Fluent replies can still be wrong.",
+            "concepts": [
+              "verification"
+            ],
+            "typeVersion": 1
+          }
+        ]
+      },
+      "caps": {
+        "client": "test",
+        "formatVersion": 1,
+        "stepTypes": {
+          "multipleChoice": 1
+        }
+      },
+      "decode": "ok",
+      "expect": {
+        "playable": false,
+        "reason": "missing-step-types",
+        "steps": [
+          {
+            "id": "t-l1-s1",
+            "action": "play"
+          }
+        ]
+      },
+      "note": null
+    },
+    {
+      "name": "nothing-to-play",
+      "lesson": {
+        "id": "t-l1",
+        "formatVersion": 1,
+        "title": "Test lesson",
+        "symbol": "questionmark.circle",
+        "exercises": [
+          {
+            "id": "t-l1-s1",
+            "type": "multipleChoice",
+            "instruction": "Which reply should you check?",
+            "options": [
+              "Any reply that states a fact",
+              "Only replies that look wrong"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Fluent replies can still be wrong.",
+            "concepts": [
+              "verification"
+            ]
+          }
+        ]
+      },
+      "caps": {
+        "client": "test",
+        "formatVersion": 1,
+        "stepTypes": {
+          "matchPairs": 1
+        }
+      },
+      "decode": "ok",
+      "expect": {
+        "playable": false,
+        "reason": "nothing-to-play",
+        "steps": [
+          {
+            "id": "t-l1-s1",
+            "action": "placeholder"
+          }
+        ]
+      },
+      "note": null
+    },
+    {
+      "name": "fallback-hidden-when-target-plays",
+      "lesson": {
+        "id": "fx-fallback-l1",
+        "formatVersion": 1,
+        "title": "Order the steps",
+        "symbol": "list.number",
+        "requires": {
+          "stepTypes": {
+            "multipleChoice": 1
+          }
+        },
+        "exercises": [
+          {
+            "id": "fx-fallback-l1-s1",
+            "type": "multipleChoice",
+            "instruction": "Which step must stay with a person?",
+            "options": [
+              "Reading the client note",
+              "Drafting the reply",
+              "Approving the reply before it is sent"
+            ],
+            "answer": [
+              2
+            ],
+            "explanation": "Approval stays with a person: they own what gets sent.",
+            "concepts": [
+              "human-in-loop"
+            ],
+            "difficulty": [
+              "recognition"
+            ]
+          },
+          {
+            "id": "fx-fallback-l1-s2",
+            "type": "buildPrompt",
+            "instruction": "Put the workflow in order",
+            "tiles": [
+              "Read the note,",
+              "draft the reply,",
+              "a person approves it,",
+              "then send."
+            ],
+            "distractors": [
+              "Send the first draft."
+            ],
+            "explanation": "Mapping the steps first shows which one must stay with a person.",
+            "concepts": [
+              "human-in-loop"
+            ],
+            "difficulty": [
+              "constrained"
+            ]
+          },
+          {
+            "id": "fx-fallback-l1-s3",
+            "type": "multipleChoice",
+            "fallbackFor": "fx-fallback-l1-s2",
+            "instruction": "Which order keeps a person in control?",
+            "options": [
+              "Draft, send, then approve",
+              "Read, draft, approve, then send",
+              "Approve, read, draft, then send"
+            ],
+            "answer": [
+              1
+            ],
+            "explanation": "Approval comes after the draft and before anything is sent.",
+            "concepts": [
+              "human-in-loop"
+            ],
+            "difficulty": [
+              "constrained"
+            ]
+          }
+        ]
+      },
+      "caps": {
+        "client": "rork-ios@4fe5be7",
+        "formatVersion": 1,
+        "stepTypes": {
+          "multipleChoice": 1,
+          "pickPrompt": 1,
+          "fillBlank": 1,
+          "buildPrompt": 1,
+          "spotProblem": 1,
+          "matchPairs": 1
+        }
+      },
+      "decode": "ok",
+      "expect": {
+        "playable": true,
+        "reason": null,
+        "steps": [
+          {
+            "id": "fx-fallback-l1-s1",
+            "action": "play"
+          },
+          {
+            "id": "fx-fallback-l1-s2",
+            "action": "play"
+          },
+          {
+            "id": "fx-fallback-l1-s3",
+            "action": "hidden"
+          }
+        ]
+      },
+      "note": null
+    },
+    {
+      "name": "fallback-plays-when-target-cannot",
+      "lesson": {
+        "id": "fx-fallback-l1",
+        "formatVersion": 1,
+        "title": "Order the steps",
+        "symbol": "list.number",
+        "requires": {
+          "stepTypes": {
+            "multipleChoice": 1
+          }
+        },
+        "exercises": [
+          {
+            "id": "fx-fallback-l1-s1",
+            "type": "multipleChoice",
+            "instruction": "Which step must stay with a person?",
+            "options": [
+              "Reading the client note",
+              "Drafting the reply",
+              "Approving the reply before it is sent"
+            ],
+            "answer": [
+              2
+            ],
+            "explanation": "Approval stays with a person: they own what gets sent.",
+            "concepts": [
+              "human-in-loop"
+            ],
+            "difficulty": [
+              "recognition"
+            ]
+          },
+          {
+            "id": "fx-fallback-l1-s2",
+            "type": "buildPrompt",
+            "instruction": "Put the workflow in order",
+            "tiles": [
+              "Read the note,",
+              "draft the reply,",
+              "a person approves it,",
+              "then send."
+            ],
+            "distractors": [
+              "Send the first draft."
+            ],
+            "explanation": "Mapping the steps first shows which one must stay with a person.",
+            "concepts": [
+              "human-in-loop"
+            ],
+            "difficulty": [
+              "constrained"
+            ]
+          },
+          {
+            "id": "fx-fallback-l1-s3",
+            "type": "multipleChoice",
+            "fallbackFor": "fx-fallback-l1-s2",
+            "instruction": "Which order keeps a person in control?",
+            "options": [
+              "Draft, send, then approve",
+              "Read, draft, approve, then send",
+              "Approve, read, draft, then send"
+            ],
+            "answer": [
+              1
+            ],
+            "explanation": "Approval comes after the draft and before anything is sent.",
+            "concepts": [
+              "human-in-loop"
+            ],
+            "difficulty": [
+              "constrained"
+            ]
+          }
+        ]
+      },
+      "caps": {
+        "client": "test",
+        "formatVersion": 1,
+        "stepTypes": {
+          "multipleChoice": 1
+        }
+      },
+      "decode": "ok",
+      "expect": {
+        "playable": true,
+        "reason": null,
+        "steps": [
+          {
+            "id": "fx-fallback-l1-s1",
+            "action": "play"
+          },
+          {
+            "id": "fx-fallback-l1-s2",
+            "action": "hidden"
+          },
+          {
+            "id": "fx-fallback-l1-s3",
+            "action": "play"
+          }
+        ]
+      },
+      "note": null
+    },
+    {
+      "name": "prototype-names-are-unknown",
+      "lesson": {
+        "id": "t-l1",
+        "formatVersion": 1,
+        "title": "Test lesson",
+        "symbol": "questionmark.circle",
+        "requires": {
+          "stepTypes": {
+            "constructor": 1
+          }
+        },
+        "exercises": [
+          {
+            "id": "t-l1-s1",
+            "type": "multipleChoice",
+            "instruction": "Which reply should you check?",
+            "options": [
+              "Any reply that states a fact",
+              "Only replies that look wrong"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Fluent replies can still be wrong.",
+            "concepts": [
+              "verification"
+            ]
+          },
+          {
+            "id": "t-l1-s2",
+            "type": "toString",
+            "instruction": "i",
+            "explanation": "e",
+            "concepts": [
+              "role"
+            ]
+          },
+          {
+            "id": "constructor",
+            "type": "constructor",
+            "instruction": "i",
+            "explanation": "e",
+            "concepts": [
+              "role"
+            ]
+          }
+        ]
+      },
+      "caps": {
+        "client": "rork-ios@4fe5be7",
+        "formatVersion": 1,
+        "stepTypes": {
+          "multipleChoice": 1,
+          "pickPrompt": 1,
+          "fillBlank": 1,
+          "buildPrompt": 1,
+          "spotProblem": 1,
+          "matchPairs": 1
+        }
+      },
+      "decode": "ok",
+      "expect": {
+        "playable": false,
+        "reason": "missing-step-types",
+        "steps": [
+          {
+            "id": "t-l1-s1",
+            "action": "play"
+          },
+          {
+            "id": "t-l1-s2",
+            "action": "placeholder"
+          },
+          {
+            "id": "constructor",
+            "action": "placeholder"
+          }
+        ]
+      },
+      "note": null
+    },
+    {
+      "name": "rork automation.json a-u1-l1",
+      "lesson": {
+        "id": "a-u1-l1",
+        "title": "Spot repeat tasks",
+        "symbol": "repeat",
+        "exercises": [
+          {
+            "id": "a-u1-l1-01",
+            "type": "multipleChoice",
+            "instruction": "Which task is the best fit for an AI shortcut?",
+            "options": [
+              "Writing a weekly status update from your notes",
+              "Deciding who to marry",
+              "Signing a legal contract",
+              "Hugging a friend"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Repetitive, text-heavy, low-risk tasks are perfect AI candidates.",
+            "concepts": [
+              "automation-basics"
+            ],
+            "difficulty": [
+              "recognition"
+            ]
+          },
+          {
+            "id": "a-u1-l1-02",
+            "type": "matchPairs",
+            "instruction": "Match the chore to the AI helper",
+            "pairs": [
+              [
+                "Inbox overload",
+                "Summarise emails"
+              ],
+              [
+                "Messy meeting notes",
+                "Extract action items"
+              ],
+              [
+                "Blank page",
+                "Draft a first version"
+              ],
+              [
+                "Long PDF",
+                "Pull key points"
+              ]
+            ],
+            "explanation": "Many daily chores map to a simple AI task.",
+            "concepts": [
+              "automation-basics"
+            ],
+            "difficulty": [
+              "recognition"
+            ]
+          },
+          {
+            "id": "a-u1-l1-03",
+            "type": "multipleChoice",
+            "instruction": "A good rule for what to automate:",
+            "options": [
+              "Frequent, repetitive and easy to check",
+              "Rare, high-stakes and hard to check",
+              "Anything at all",
+              "Only things you enjoy"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "If you can quickly verify the result, it’s a safe bet.",
+            "concepts": [
+              "automation-basics"
+            ],
+            "difficulty": [
+              "constrained"
+            ]
+          },
+          {
+            "id": "a-u1-l1-04",
+            "type": "fillBlank",
+            "instruction": "Fill in the blank",
+            "context": "Every Friday you write the same update.",
+            "template": "Turn these bullet notes into my weekly update ___ as last week.",
+            "options": [
+              "using the same structure",
+              "in a totally new style",
+              "as a song"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Consistency is the point of a workflow.",
+            "concepts": [
+              "templates"
+            ],
+            "difficulty": [
+              "constrained"
+            ]
+          },
+          {
+            "id": "a-u1-l1-05",
+            "type": "pickPrompt",
+            "instruction": "Pick the more reusable prompt",
+            "context": "You summarise customer feedback weekly.",
+            "options": [
+              "Summarise this.",
+              "Summarise the feedback below into: Top 3 themes, 1 quote per theme, and 1 suggested fix. Feedback: [paste here]"
+            ],
+            "answer": [
+              1
+            ],
+            "explanation": "A fixed structure with a paste slot can be reused every week.",
+            "concepts": [
+              "templates"
+            ],
+            "difficulty": [
+              "production"
+            ]
+          },
+          {
+            "id": "a-u1-l1-06",
+            "type": "spotProblem",
+            "instruction": "Tap the task you should NOT fully automate",
+            "context": "Your to-do list for AI help:",
+            "segments": [
+              "Draft replies to routine scheduling emails.",
+              "Summarise this week’s meeting notes.",
+              "Automatically approve all refund requests without review.",
+              "Turn notes into a tidy checklist."
+            ],
+            "answer": [
+              2
+            ],
+            "explanation": "Money decisions need a human in the loop.",
+            "concepts": [
+              "human-in-loop"
+            ],
+            "difficulty": [
+              "production"
+            ]
+          },
+          {
+            "id": "a-u1-l1-07",
+            "type": "buildPrompt",
+            "instruction": "Build the prompt",
+            "context": "Extract action items.",
+            "tiles": [
+              "From these notes,",
+              "list action items",
+              "with owner",
+              "and due date"
+            ],
+            "distractors": [
+              "sometimes",
+              "for fun"
+            ],
+            "explanation": "Clear output fields make it workflow-ready.",
+            "concepts": [
+              "templates"
+            ],
+            "difficulty": [
+              "production"
+            ]
+          },
+          {
+            "id": "a-u1-l1-08",
+            "type": "multipleChoice",
+            "instruction": "“Human in the loop” means…",
+            "options": [
+              "A person reviews before anything important happens",
+              "Humans are replaced",
+              "AI runs forever"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Nice. You stay in control of what matters.",
+            "concepts": [
+              "human-in-loop"
+            ],
+            "difficulty": [
+              "confidence"
+            ]
+          }
+        ]
+      },
+      "caps": {
+        "client": "rork-ios@4fe5be7",
+        "formatVersion": 1,
+        "stepTypes": {
+          "multipleChoice": 1,
+          "pickPrompt": 1,
+          "fillBlank": 1,
+          "buildPrompt": 1,
+          "spotProblem": 1,
+          "matchPairs": 1
+        }
+      },
+      "decode": "ok",
+      "expect": {
+        "playable": true,
+        "reason": null,
+        "steps": [
+          {
+            "id": "a-u1-l1-01",
+            "action": "play"
+          },
+          {
+            "id": "a-u1-l1-02",
+            "action": "play"
+          },
+          {
+            "id": "a-u1-l1-03",
+            "action": "play"
+          },
+          {
+            "id": "a-u1-l1-04",
+            "action": "play"
+          },
+          {
+            "id": "a-u1-l1-05",
+            "action": "play"
+          },
+          {
+            "id": "a-u1-l1-06",
+            "action": "play"
+          },
+          {
+            "id": "a-u1-l1-07",
+            "action": "play"
+          },
+          {
+            "id": "a-u1-l1-08",
+            "action": "play"
+          }
+        ]
+      },
+      "note": null
+    },
+    {
+      "name": "rork automation.json a-u1-l2",
+      "lesson": {
+        "id": "a-u1-l2",
+        "title": "Prompt templates",
+        "symbol": "doc.on.doc.fill",
+        "exercises": [
+          {
+            "id": "a-u1-l2-01",
+            "type": "multipleChoice",
+            "instruction": "What’s a prompt template?",
+            "options": [
+              "A saved prompt with blanks you fill in each time",
+              "A paid AI plan",
+              "A type of chatbot",
+              "An error log"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Templates save time and keep quality consistent.",
+            "concepts": [
+              "templates"
+            ],
+            "difficulty": [
+              "recognition"
+            ]
+          },
+          {
+            "id": "a-u1-l2-02",
+            "type": "pickPrompt",
+            "instruction": "Pick the better template",
+            "context": "Replying to job applicants.",
+            "options": [
+              "Write a reply.",
+              "Write a warm reply to [Name] about the [Role] role. Status: [Next step]. Keep it under 120 words."
+            ],
+            "answer": [
+              1
+            ],
+            "explanation": "Clear slots for name, role and status. Reuse forever.",
+            "concepts": [
+              "templates"
+            ],
+            "difficulty": [
+              "recognition"
+            ]
+          },
+          {
+            "id": "a-u1-l2-03",
+            "type": "matchPairs",
+            "instruction": "Match the slot to what goes in it",
+            "pairs": [
+              [
+                "[Audience]",
+                "New customers"
+              ],
+              [
+                "[Length]",
+                "Under 100 words"
+              ],
+              [
+                "[Tone]",
+                "Friendly"
+              ],
+              [
+                "[Input]",
+                "Pasted notes"
+              ]
+            ],
+            "explanation": "Slots keep the stable parts stable and the changing parts obvious.",
+            "concepts": [
+              "templates"
+            ],
+            "difficulty": [
+              "constrained"
+            ]
+          },
+          {
+            "id": "a-u1-l2-04",
+            "type": "fillBlank",
+            "instruction": "Fill in the blank",
+            "context": "Making a template easy to reuse.",
+            "template": "Put changing details in ___ so you can swap them quickly.",
+            "options": [
+              "[brackets]",
+              "invisible ink",
+              "a different language"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Brackets make blanks easy to spot.",
+            "concepts": [
+              "templates"
+            ],
+            "difficulty": [
+              "constrained"
+            ]
+          },
+          {
+            "id": "a-u1-l2-05",
+            "type": "buildPrompt",
+            "instruction": "Build the template",
+            "context": "A reusable meeting recap.",
+            "tiles": [
+              "Summarise [notes]",
+              "for [audience]",
+              "in 5 bullets",
+              "plus next steps"
+            ],
+            "distractors": [
+              "never mind",
+              "the colour red"
+            ],
+            "explanation": "Input, audience, format and next steps. A solid recap template.",
+            "concepts": [
+              "templates"
+            ],
+            "difficulty": [
+              "constrained"
+            ]
+          },
+          {
+            "id": "a-u1-l2-06",
+            "type": "spotProblem",
+            "instruction": "Tap the template line that will cause trouble",
+            "context": "Your saved “client email” template:",
+            "segments": [
+              "Write an email to [Client name].",
+              "Topic: [Topic].",
+              "Always promise delivery by tomorrow, no matter what.",
+              "Tone: professional and warm, under 150 words."
+            ],
+            "answer": [
+              2
+            ],
+            "explanation": "Hard-coding a promise into a template creates problems every time it’s reused.",
+            "concepts": [
+              "templates",
+              "human-in-loop"
+            ],
+            "difficulty": [
+              "production"
+            ]
+          },
+          {
+            "id": "a-u1-l2-07",
+            "type": "pickPrompt",
+            "instruction": "Which step makes a workflow safer?",
+            "context": "You auto-draft replies to customers.",
+            "options": [
+              "Send drafts automatically without reading",
+              "Review each draft before sending, at least for the first few weeks"
+            ],
+            "answer": [
+              1
+            ],
+            "explanation": "Trust is earned. Review first, automate more later.",
+            "concepts": [
+              "human-in-loop"
+            ],
+            "difficulty": [
+              "production"
+            ]
+          },
+          {
+            "id": "a-u1-l2-08",
+            "type": "multipleChoice",
+            "instruction": "Templates are best for tasks that are…",
+            "options": [
+              "Repeated often",
+              "Done once in a lifetime",
+              "Impossible"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "You’re building real workflows now!",
+            "concepts": [
+              "templates"
+            ],
+            "difficulty": [
+              "confidence"
+            ]
+          }
+        ]
+      },
+      "caps": {
+        "client": "rork-ios@4fe5be7",
+        "formatVersion": 1,
+        "stepTypes": {
+          "multipleChoice": 1,
+          "pickPrompt": 1,
+          "fillBlank": 1,
+          "buildPrompt": 1,
+          "spotProblem": 1,
+          "matchPairs": 1
+        }
+      },
+      "decode": "ok",
+      "expect": {
+        "playable": true,
+        "reason": null,
+        "steps": [
+          {
+            "id": "a-u1-l2-01",
+            "action": "play"
+          },
+          {
+            "id": "a-u1-l2-02",
+            "action": "play"
+          },
+          {
+            "id": "a-u1-l2-03",
+            "action": "play"
+          },
+          {
+            "id": "a-u1-l2-04",
+            "action": "play"
+          },
+          {
+            "id": "a-u1-l2-05",
+            "action": "play"
+          },
+          {
+            "id": "a-u1-l2-06",
+            "action": "play"
+          },
+          {
+            "id": "a-u1-l2-07",
+            "action": "play"
+          },
+          {
+            "id": "a-u1-l2-08",
+            "action": "play"
+          }
+        ]
+      },
+      "note": null
+    },
+    {
+      "name": "rork ethics.json e-u1-l1",
+      "lesson": {
+        "id": "e-u1-l1",
+        "title": "Privacy",
+        "symbol": "lock.fill",
+        "exercises": [
+          {
+            "id": "e-u1-l1-01",
+            "type": "multipleChoice",
+            "instruction": "Which is safest to paste into a public AI chat?",
+            "options": [
+              "A generic question about writing a cover letter",
+              "Your bank password",
+              "A colleague’s medical records",
+              "Your company’s unreleased financials"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Never share passwords, private data about others, or confidential work info.",
+            "concepts": [
+              "privacy"
+            ],
+            "difficulty": [
+              "recognition"
+            ]
+          },
+          {
+            "id": "e-u1-l1-02",
+            "type": "matchPairs",
+            "instruction": "Match the data to the right action",
+            "pairs": [
+              [
+                "Passwords",
+                "Never share"
+              ],
+              [
+                "Client names",
+                "Anonymise first"
+              ],
+              [
+                "Public facts",
+                "Fine to share"
+              ],
+              [
+                "Work secrets",
+                "Check company policy"
+              ]
+            ],
+            "explanation": "When in doubt, leave it out or anonymise it.",
+            "concepts": [
+              "privacy"
+            ],
+            "difficulty": [
+              "recognition"
+            ]
+          },
+          {
+            "id": "e-u1-l1-03",
+            "type": "pickPrompt",
+            "instruction": "Pick the safer prompt",
+            "context": "Getting help with a tough work email.",
+            "options": [
+              "Here is the full email thread with names, phone numbers and the contract value…",
+              "Help me reply to a client who’s unhappy about a 2-week delay. Keep it apologetic and propose a new date."
+            ],
+            "answer": [
+              1
+            ],
+            "explanation": "You can get great help without sharing identifying details.",
+            "concepts": [
+              "privacy"
+            ],
+            "difficulty": [
+              "constrained"
+            ]
+          },
+          {
+            "id": "e-u1-l1-04",
+            "type": "fillBlank",
+            "instruction": "Fill in the blank",
+            "context": "You need feedback on a customer complaint.",
+            "template": "Replace real names with ___ before pasting.",
+            "options": [
+              "placeholders like [Customer]",
+              "their home address",
+              "their phone number"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Anonymising keeps people’s data safe.",
+            "concepts": [
+              "privacy"
+            ],
+            "difficulty": [
+              "constrained"
+            ]
+          },
+          {
+            "id": "e-u1-l1-05",
+            "type": "spotProblem",
+            "instruction": "Tap the risky part of this prompt",
+            "context": "A prompt someone wrote:",
+            "segments": [
+              "Help me write a friendly reminder email.",
+              "The meeting is about the Q3 marketing plan.",
+              "My login is jane@corp.com and my password is Sunny2024!",
+              "Keep it under 100 words."
+            ],
+            "answer": [
+              2
+            ],
+            "explanation": "Never share credentials with any AI tool.",
+            "concepts": [
+              "privacy"
+            ],
+            "difficulty": [
+              "production"
+            ]
+          },
+          {
+            "id": "e-u1-l1-06",
+            "type": "buildPrompt",
+            "instruction": "Build the privacy-safe prompt",
+            "context": "Ask for help with a team conflict.",
+            "tiles": [
+              "Two teammates",
+              "disagree about deadlines.",
+              "Suggest a fair way",
+              "to resolve it"
+            ],
+            "distractors": [
+              "here are their SSNs",
+              "full names"
+            ],
+            "explanation": "Describe the situation, not the people.",
+            "concepts": [
+              "privacy"
+            ],
+            "difficulty": [
+              "production"
+            ]
+          },
+          {
+            "id": "e-u1-l1-07",
+            "type": "multipleChoice",
+            "instruction": "Before using AI with work data, you should…",
+            "options": [
+              "Check your company’s AI policy",
+              "Paste everything and hope",
+              "Turn off your Wi-Fi"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Many workplaces have approved tools and rules.",
+            "concepts": [
+              "privacy"
+            ],
+            "difficulty": [
+              "production"
+            ]
+          },
+          {
+            "id": "e-u1-l1-08",
+            "type": "multipleChoice",
+            "instruction": "Passwords should be shared with AI tools…",
+            "options": [
+              "Never",
+              "Sometimes",
+              "Always"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Easy one. Never! You’re already safer.",
+            "concepts": [
+              "privacy"
+            ],
+            "difficulty": [
+              "confidence"
+            ]
+          }
+        ]
+      },
+      "caps": {
+        "client": "rork-ios@4fe5be7",
+        "formatVersion": 1,
+        "stepTypes": {
+          "multipleChoice": 1,
+          "pickPrompt": 1,
+          "fillBlank": 1,
+          "buildPrompt": 1,
+          "spotProblem": 1,
+          "matchPairs": 1
+        }
+      },
+      "decode": "ok",
+      "expect": {
+        "playable": true,
+        "reason": null,
+        "steps": [
+          {
+            "id": "e-u1-l1-01",
+            "action": "play"
+          },
+          {
+            "id": "e-u1-l1-02",
+            "action": "play"
+          },
+          {
+            "id": "e-u1-l1-03",
+            "action": "play"
+          },
+          {
+            "id": "e-u1-l1-04",
+            "action": "play"
+          },
+          {
+            "id": "e-u1-l1-05",
+            "action": "play"
+          },
+          {
+            "id": "e-u1-l1-06",
+            "action": "play"
+          },
+          {
+            "id": "e-u1-l1-07",
+            "action": "play"
+          },
+          {
+            "id": "e-u1-l1-08",
+            "action": "play"
+          }
+        ]
+      },
+      "note": null
+    },
+    {
+      "name": "rork ethics.json e-u1-l2",
+      "lesson": {
+        "id": "e-u1-l2",
+        "title": "Bias & honesty",
+        "symbol": "scalemass.fill",
+        "exercises": [
+          {
+            "id": "e-u1-l2-01",
+            "type": "multipleChoice",
+            "instruction": "Why can AI outputs be biased?",
+            "options": [
+              "They learn from human-written data that contains biases",
+              "AI has personal opinions",
+              "Bias is impossible in AI",
+              "Because of the screen size"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Models reflect patterns in their training data, good and bad.",
+            "concepts": [
+              "bias"
+            ],
+            "difficulty": [
+              "recognition"
+            ]
+          },
+          {
+            "id": "e-u1-l2-02",
+            "type": "spotProblem",
+            "instruction": "Tap the biased sentence",
+            "context": "Write a short description of a great nurse.",
+            "segments": [
+              "A great nurse is compassionate and observant.",
+              "They stay calm under pressure.",
+              "She should always be gentle, as women are naturally better caregivers.",
+              "They communicate clearly with patients and families."
+            ],
+            "answer": [
+              2
+            ],
+            "explanation": "That line assumes gender and repeats a stereotype.",
+            "concepts": [
+              "bias"
+            ],
+            "difficulty": [
+              "recognition"
+            ]
+          },
+          {
+            "id": "e-u1-l2-03",
+            "type": "matchPairs",
+            "instruction": "Match the situation to the honest choice",
+            "pairs": [
+              [
+                "AI wrote your essay",
+                "Follow your school’s AI rules"
+              ],
+              [
+                "AI image of a real event",
+                "Label it as AI"
+              ],
+              [
+                "AI drafted a report",
+                "Review and own it"
+              ],
+              [
+                "AI gave medical info",
+                "Confirm with a professional"
+              ]
+            ],
+            "explanation": "Honest use means being transparent and responsible.",
+            "concepts": [
+              "honesty"
+            ],
+            "difficulty": [
+              "constrained"
+            ]
+          },
+          {
+            "id": "e-u1-l2-04",
+            "type": "pickPrompt",
+            "instruction": "Pick the prompt that reduces bias",
+            "context": "Generating example job candidates for training.",
+            "options": [
+              "Describe a typical engineer.",
+              "Create 4 diverse example candidates for an engineering role with varied backgrounds, and avoid stereotypes."
+            ],
+            "answer": [
+              1
+            ],
+            "explanation": "Explicitly asking for diversity and no stereotypes helps.",
+            "concepts": [
+              "bias"
+            ],
+            "difficulty": [
+              "constrained"
+            ]
+          },
+          {
+            "id": "e-u1-l2-05",
+            "type": "fillBlank",
+            "instruction": "Fill in the blank",
+            "context": "Checking a hiring summary written by AI.",
+            "template": "Review AI output for ___ before using it in decisions about people.",
+            "options": [
+              "bias and errors",
+              "font choice",
+              "word count only"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Decisions about people need extra care.",
+            "concepts": [
+              "bias"
+            ],
+            "difficulty": [
+              "constrained"
+            ]
+          },
+          {
+            "id": "e-u1-l2-06",
+            "type": "buildPrompt",
+            "instruction": "Build the prompt",
+            "context": "Ask the AI to check itself.",
+            "tiles": [
+              "Review your answer",
+              "for stereotypes",
+              "or one-sided claims",
+              "and fix them"
+            ],
+            "distractors": [
+              "add more",
+              "ignore this"
+            ],
+            "explanation": "AI can help audit its own output, but you still check.",
+            "concepts": [
+              "bias"
+            ],
+            "difficulty": [
+              "production"
+            ]
+          },
+          {
+            "id": "e-u1-l2-07",
+            "type": "multipleChoice",
+            "instruction": "Who is responsible for content you publish with AI help?",
+            "options": [
+              "You are",
+              "The AI is",
+              "Nobody"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "AI is a tool. You own what you share.",
+            "concepts": [
+              "honesty"
+            ],
+            "difficulty": [
+              "production"
+            ]
+          },
+          {
+            "id": "e-u1-l2-08",
+            "type": "multipleChoice",
+            "instruction": "Labelling AI-generated images is…",
+            "options": [
+              "A good, honest practice",
+              "Never needed",
+              "Illegal"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Transparency for the win. Great job on Ethics & Safety!",
+            "concepts": [
+              "honesty"
+            ],
+            "difficulty": [
+              "confidence"
+            ]
+          }
+        ]
+      },
+      "caps": {
+        "client": "rork-ios@4fe5be7",
+        "formatVersion": 1,
+        "stepTypes": {
+          "multipleChoice": 1,
+          "pickPrompt": 1,
+          "fillBlank": 1,
+          "buildPrompt": 1,
+          "spotProblem": 1,
+          "matchPairs": 1
+        }
+      },
+      "decode": "ok",
+      "expect": {
+        "playable": true,
+        "reason": null,
+        "steps": [
+          {
+            "id": "e-u1-l2-01",
+            "action": "play"
+          },
+          {
+            "id": "e-u1-l2-02",
+            "action": "play"
+          },
+          {
+            "id": "e-u1-l2-03",
+            "action": "play"
+          },
+          {
+            "id": "e-u1-l2-04",
+            "action": "play"
+          },
+          {
+            "id": "e-u1-l2-05",
+            "action": "play"
+          },
+          {
+            "id": "e-u1-l2-06",
+            "action": "play"
+          },
+          {
+            "id": "e-u1-l2-07",
+            "action": "play"
+          },
+          {
+            "id": "e-u1-l2-08",
+            "action": "play"
+          }
+        ]
+      },
+      "note": null
+    },
+    {
+      "name": "rork image.json i-u1-l1",
+      "lesson": {
+        "id": "i-u1-l1",
+        "title": "Subject & style",
+        "symbol": "paintbrush.pointed.fill",
+        "exercises": [
+          {
+            "id": "i-u1-l1-01",
+            "type": "multipleChoice",
+            "instruction": "What should an image prompt start with?",
+            "options": [
+              "A clear subject: what is in the picture",
+              "The file size",
+              "Your name",
+              "A random word"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Image tools need to know the main subject first.",
+            "concepts": [
+              "image-subject"
+            ],
+            "difficulty": [
+              "recognition"
+            ]
+          },
+          {
+            "id": "i-u1-l1-02",
+            "type": "pickPrompt",
+            "instruction": "Pick the better image prompt",
+            "context": "A picture for your bakery’s menu.",
+            "options": [
+              "bread",
+              "A rustic sourdough loaf on a wooden board, soft morning window light, close-up food photography"
+            ],
+            "answer": [
+              1
+            ],
+            "explanation": "Subject, setting, lighting and style give a usable image.",
+            "concepts": [
+              "image-subject",
+              "image-style"
+            ],
+            "difficulty": [
+              "recognition"
+            ]
+          },
+          {
+            "id": "i-u1-l1-03",
+            "type": "matchPairs",
+            "instruction": "Match the keyword to what it controls",
+            "pairs": [
+              [
+                "Watercolour",
+                "Art style"
+              ],
+              [
+                "Golden hour",
+                "Lighting"
+              ],
+              [
+                "Close-up",
+                "Camera framing"
+              ],
+              [
+                "Cosy cabin",
+                "Setting"
+              ]
+            ],
+            "explanation": "Mix these ingredients to steer the look.",
+            "concepts": [
+              "image-style"
+            ],
+            "difficulty": [
+              "constrained"
+            ]
+          },
+          {
+            "id": "i-u1-l1-04",
+            "type": "fillBlank",
+            "instruction": "Fill in the blank",
+            "context": "You want a children’s book feel.",
+            "template": "A fox reading under a tree, ___ illustration.",
+            "options": [
+              "soft watercolour",
+              "blurry security-camera",
+              "spreadsheet"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Style words set the mood instantly.",
+            "concepts": [
+              "image-style"
+            ],
+            "difficulty": [
+              "constrained"
+            ]
+          },
+          {
+            "id": "i-u1-l1-05",
+            "type": "buildPrompt",
+            "instruction": "Build the image prompt",
+            "context": "A poster for a jazz night.",
+            "tiles": [
+              "A saxophone player",
+              "on a dim stage",
+              "warm spotlight",
+              "retro poster style"
+            ],
+            "distractors": [
+              "Excel",
+              "maybe later"
+            ],
+            "explanation": "Subject, setting, lighting, style. Chef’s kiss.",
+            "concepts": [
+              "image-subject",
+              "image-style"
+            ],
+            "difficulty": [
+              "constrained"
+            ]
+          },
+          {
+            "id": "i-u1-l1-06",
+            "type": "spotProblem",
+            "instruction": "Tap the word that will confuse the image tool",
+            "context": "Prompt pieces for a calm beach scene:",
+            "segments": [
+              "Empty beach at sunrise",
+              "pastel sky, gentle waves",
+              "chaotic crowded city traffic",
+              "minimal, peaceful photography"
+            ],
+            "answer": [
+              2
+            ],
+            "explanation": "Contradictory details fight each other in the image.",
+            "concepts": [
+              "image-subject"
+            ],
+            "difficulty": [
+              "production"
+            ]
+          },
+          {
+            "id": "i-u1-l1-07",
+            "type": "pickPrompt",
+            "instruction": "Pick the more respectful, legal prompt",
+            "context": "Making art for your blog.",
+            "options": [
+              "A cosy reading nook, illustrated in a warm, hand-drawn storybook style",
+              "Copy [famous living artist]’s painting exactly and add my logo"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Describe styles generally. Don’t copy specific artists’ work.",
+            "concepts": [
+              "image-ethics"
+            ],
+            "difficulty": [
+              "production"
+            ]
+          },
+          {
+            "id": "i-u1-l1-08",
+            "type": "multipleChoice",
+            "instruction": "“Golden hour” in an image prompt describes…",
+            "options": [
+              "Lighting",
+              "A clock",
+              "The price"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Warm, glowing light. You’re thinking like a photographer!",
+            "concepts": [
+              "image-style"
+            ],
+            "difficulty": [
+              "confidence"
+            ]
+          }
+        ]
+      },
+      "caps": {
+        "client": "rork-ios@4fe5be7",
+        "formatVersion": 1,
+        "stepTypes": {
+          "multipleChoice": 1,
+          "pickPrompt": 1,
+          "fillBlank": 1,
+          "buildPrompt": 1,
+          "spotProblem": 1,
+          "matchPairs": 1
+        }
+      },
+      "decode": "ok",
+      "expect": {
+        "playable": true,
+        "reason": null,
+        "steps": [
+          {
+            "id": "i-u1-l1-01",
+            "action": "play"
+          },
+          {
+            "id": "i-u1-l1-02",
+            "action": "play"
+          },
+          {
+            "id": "i-u1-l1-03",
+            "action": "play"
+          },
+          {
+            "id": "i-u1-l1-04",
+            "action": "play"
+          },
+          {
+            "id": "i-u1-l1-05",
+            "action": "play"
+          },
+          {
+            "id": "i-u1-l1-06",
+            "action": "play"
+          },
+          {
+            "id": "i-u1-l1-07",
+            "action": "play"
+          },
+          {
+            "id": "i-u1-l1-08",
+            "action": "play"
+          }
+        ]
+      },
+      "note": null
+    },
+    {
+      "name": "rork image.json i-u1-l2",
+      "lesson": {
+        "id": "i-u1-l2",
+        "title": "Refine & video",
+        "symbol": "film.fill",
+        "exercises": [
+          {
+            "id": "i-u1-l2-01",
+            "type": "multipleChoice",
+            "instruction": "The image has the wrong colours. Best next step?",
+            "options": [
+              "Adjust the prompt with specific colour words",
+              "Delete the app",
+              "Use the same prompt forever",
+              "Add more random words"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Iterate with targeted changes, just like text prompts.",
+            "concepts": [
+              "image-iterate"
+            ],
+            "difficulty": [
+              "recognition"
+            ]
+          },
+          {
+            "id": "i-u1-l2-02",
+            "type": "matchPairs",
+            "instruction": "Match the video prompt term to its meaning",
+            "pairs": [
+              [
+                "Slow pan",
+                "Camera moves sideways"
+              ],
+              [
+                "Zoom in",
+                "Camera moves closer"
+              ],
+              [
+                "Time-lapse",
+                "Time sped up"
+              ],
+              [
+                "Static shot",
+                "Camera stays still"
+              ]
+            ],
+            "explanation": "Video prompts also describe camera motion.",
+            "concepts": [
+              "video-motion"
+            ],
+            "difficulty": [
+              "recognition"
+            ]
+          },
+          {
+            "id": "i-u1-l2-03",
+            "type": "pickPrompt",
+            "instruction": "Pick the better video prompt",
+            "context": "A short clip for a coffee shop ad.",
+            "options": [
+              "coffee video",
+              "Slow zoom in on steam rising from a latte, cosy café background, warm light, 5 seconds"
+            ],
+            "answer": [
+              1
+            ],
+            "explanation": "Motion, subject, setting, light and length.",
+            "concepts": [
+              "video-motion"
+            ],
+            "difficulty": [
+              "constrained"
+            ]
+          },
+          {
+            "id": "i-u1-l2-04",
+            "type": "fillBlank",
+            "instruction": "Fill in the blank",
+            "context": "You want a vertical clip for a phone story.",
+            "template": "A dog running through autumn leaves, ___ aspect ratio.",
+            "options": [
+              "9:16 vertical",
+              "16:9 widescreen",
+              "square spreadsheet"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Aspect ratio matters for where the clip will be shown.",
+            "concepts": [
+              "video-motion"
+            ],
+            "difficulty": [
+              "constrained"
+            ]
+          },
+          {
+            "id": "i-u1-l2-05",
+            "type": "buildPrompt",
+            "instruction": "Build the refinement",
+            "context": "The logo mock-up looks too busy.",
+            "tiles": [
+              "Same design",
+              "but simpler,",
+              "flat colours,",
+              "white background"
+            ],
+            "distractors": [
+              "add 100 details",
+              "who knows"
+            ],
+            "explanation": "Keep what works, change what doesn’t.",
+            "concepts": [
+              "image-iterate"
+            ],
+            "difficulty": [
+              "constrained"
+            ]
+          },
+          {
+            "id": "i-u1-l2-06",
+            "type": "spotProblem",
+            "instruction": "Tap the problem in this AI image description",
+            "context": "An AI image tool generated “a family photo”. Its description:",
+            "segments": [
+              "Four people smiling in a park.",
+              "Soft afternoon light.",
+              "One person has six fingers on their left hand.",
+              "Trees and a picnic blanket in the background."
+            ],
+            "answer": [
+              2
+            ],
+            "explanation": "Hands are a common AI image glitch. Always zoom in before publishing.",
+            "concepts": [
+              "image-iterate",
+              "verification"
+            ],
+            "difficulty": [
+              "production"
+            ]
+          },
+          {
+            "id": "i-u1-l2-07",
+            "type": "multipleChoice",
+            "instruction": "Before posting an AI image of a real event, you should…",
+            "options": [
+              "Label it as AI-generated",
+              "Claim it’s a real photo",
+              "Remove all labels"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Transparency builds trust and avoids misleading people.",
+            "concepts": [
+              "image-ethics"
+            ],
+            "difficulty": [
+              "production"
+            ]
+          },
+          {
+            "id": "i-u1-l2-08",
+            "type": "multipleChoice",
+            "instruction": "“Slow pan” describes…",
+            "options": [
+              "Camera movement",
+              "A cooking pot",
+              "Colour"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "You’re ready to direct your first AI clip!",
+            "concepts": [
+              "video-motion"
+            ],
+            "difficulty": [
+              "confidence"
+            ]
+          }
+        ]
+      },
+      "caps": {
+        "client": "rork-ios@4fe5be7",
+        "formatVersion": 1,
+        "stepTypes": {
+          "multipleChoice": 1,
+          "pickPrompt": 1,
+          "fillBlank": 1,
+          "buildPrompt": 1,
+          "spotProblem": 1,
+          "matchPairs": 1
+        }
+      },
+      "decode": "ok",
+      "expect": {
+        "playable": true,
+        "reason": null,
+        "steps": [
+          {
+            "id": "i-u1-l2-01",
+            "action": "play"
+          },
+          {
+            "id": "i-u1-l2-02",
+            "action": "play"
+          },
+          {
+            "id": "i-u1-l2-03",
+            "action": "play"
+          },
+          {
+            "id": "i-u1-l2-04",
+            "action": "play"
+          },
+          {
+            "id": "i-u1-l2-05",
+            "action": "play"
+          },
+          {
+            "id": "i-u1-l2-06",
+            "action": "play"
+          },
+          {
+            "id": "i-u1-l2-07",
+            "action": "play"
+          },
+          {
+            "id": "i-u1-l2-08",
+            "action": "play"
+          }
+        ]
+      },
+      "note": null
+    },
+    {
+      "name": "rork prompting.json p-u1-l1",
+      "lesson": {
+        "id": "p-u1-l1",
+        "title": "Role",
+        "symbol": "person.fill",
+        "exercises": [
+          {
+            "id": "p-u1-l1-01",
+            "type": "multipleChoice",
+            "instruction": "What does giving an AI a “role” do?",
+            "options": [
+              "It changes which AI company answers you",
+              "It tells the AI whose perspective and expertise to write from",
+              "It makes the AI answer faster",
+              "It unlocks secret features"
+            ],
+            "answer": [
+              1
+            ],
+            "explanation": "A role like “Act as a travel agent” frames the voice, vocabulary and priorities of the reply.",
+            "concepts": [
+              "role"
+            ],
+            "difficulty": [
+              "recognition"
+            ]
+          },
+          {
+            "id": "p-u1-l1-02",
+            "type": "pickPrompt",
+            "instruction": "Pick the better prompt",
+            "context": "You want advice on a tricky job interview question.",
+            "options": [
+              "Interview question help",
+              "Act as an experienced hiring manager. How should I answer “What is your biggest weakness?”"
+            ],
+            "answer": [
+              1
+            ],
+            "explanation": "The role (hiring manager) gives the AI an expert lens, and the task is clear.",
+            "concepts": [
+              "role",
+              "task"
+            ],
+            "difficulty": [
+              "recognition"
+            ]
+          },
+          {
+            "id": "p-u1-l1-03",
+            "type": "multipleChoice",
+            "instruction": "Which of these is a role?",
+            "options": [
+              "“in 3 bullet points”",
+              "“for my grandma”",
+              "“Act as a personal trainer”",
+              "“by Friday”"
+            ],
+            "answer": [
+              2
+            ],
+            "explanation": "“Act as…” assigns a role. The others are format, audience and deadline details.",
+            "concepts": [
+              "role"
+            ],
+            "difficulty": [
+              "recognition"
+            ]
+          },
+          {
+            "id": "p-u1-l1-04",
+            "type": "fillBlank",
+            "instruction": "Fill in the blank",
+            "context": "You need help planning healthy weekly meals.",
+            "template": "Act as a ___ and create a 5-day dinner plan for a busy family.",
+            "options": [
+              "nutritionist",
+              "lawyer",
+              "pilot"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "A nutritionist is the expert whose perspective fits meal planning.",
+            "concepts": [
+              "role"
+            ],
+            "difficulty": [
+              "constrained"
+            ]
+          },
+          {
+            "id": "p-u1-l1-05",
+            "type": "matchPairs",
+            "instruction": "Match each need to the best role",
+            "pairs": [
+              [
+                "Polish my CV",
+                "Career coach"
+              ],
+              [
+                "Explain a rash",
+                "Doctor (then see a real one!)"
+              ],
+              [
+                "Plan a trip to Lisbon",
+                "Travel agent"
+              ],
+              [
+                "Make my email kinder",
+                "Friendly editor"
+              ]
+            ],
+            "explanation": "Matching the role to the task gives replies the right expertise and tone.",
+            "concepts": [
+              "role"
+            ],
+            "difficulty": [
+              "constrained"
+            ]
+          },
+          {
+            "id": "p-u1-l1-06",
+            "type": "buildPrompt",
+            "instruction": "Build the prompt",
+            "context": "Get feedback on your short story.",
+            "tiles": [
+              "Act as",
+              "a supportive",
+              "writing tutor",
+              "and review",
+              "my short story"
+            ],
+            "distractors": [
+              "banana",
+              "quickly maybe"
+            ],
+            "explanation": "Role first, then the task. Clear and kind.",
+            "concepts": [
+              "role",
+              "task"
+            ],
+            "difficulty": [
+              "constrained"
+            ]
+          },
+          {
+            "id": "p-u1-l1-07",
+            "type": "spotProblem",
+            "instruction": "Tap the sentence that ignores the role",
+            "context": "Act as a friendly kindergarten teacher and explain why the sky is blue.",
+            "segments": [
+              "Great question, little explorer!",
+              "Sunlight is made of many colours mixed together.",
+              "Rayleigh scattering is inversely proportional to the fourth power of wavelength.",
+              "Blue light bounces around the sky the most, so we see blue everywhere!"
+            ],
+            "answer": [
+              2
+            ],
+            "explanation": "That sentence uses physics jargon no kindergartner would follow. The role asked for a simple, friendly voice.",
+            "concepts": [
+              "role"
+            ],
+            "difficulty": [
+              "production"
+            ]
+          },
+          {
+            "id": "p-u1-l1-08",
+            "type": "pickPrompt",
+            "instruction": "Pick the better prompt",
+            "context": "You want a workout plan.",
+            "options": [
+              "Act as a certified personal trainer. Build me a 3-day beginner workout plan I can do at home with no equipment.",
+              "Act as a personal trainer.",
+              "Workout?"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "A role alone is not enough. Pair it with a clear task and useful details.",
+            "concepts": [
+              "role",
+              "task"
+            ],
+            "difficulty": [
+              "production"
+            ]
+          },
+          {
+            "id": "p-u1-l1-09",
+            "type": "fillBlank",
+            "instruction": "Fill in the blank",
+            "context": "You want to practise a hard conversation with your boss.",
+            "template": "___ my manager so I can practise asking for a raise.",
+            "options": [
+              "Pretend to be",
+              "Forget about",
+              "Translate"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "“Pretend to be…” sets up a role-play, a powerful way to rehearse.",
+            "concepts": [
+              "role"
+            ],
+            "difficulty": [
+              "production"
+            ]
+          },
+          {
+            "id": "p-u1-l1-10",
+            "type": "multipleChoice",
+            "instruction": "True or false: a role is the only thing a good prompt needs.",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": [
+              1
+            ],
+            "explanation": "Roles help, but you also need a task, context and format. More on that next!",
+            "concepts": [
+              "role"
+            ],
+            "difficulty": [
+              "confidence"
+            ]
+          }
+        ]
+      },
+      "caps": {
+        "client": "rork-ios@4fe5be7",
+        "formatVersion": 1,
+        "stepTypes": {
+          "multipleChoice": 1,
+          "pickPrompt": 1,
+          "fillBlank": 1,
+          "buildPrompt": 1,
+          "spotProblem": 1,
+          "matchPairs": 1
+        }
+      },
+      "decode": "ok",
+      "expect": {
+        "playable": true,
+        "reason": null,
+        "steps": [
+          {
+            "id": "p-u1-l1-01",
+            "action": "play"
+          },
+          {
+            "id": "p-u1-l1-02",
+            "action": "play"
+          },
+          {
+            "id": "p-u1-l1-03",
+            "action": "play"
+          },
+          {
+            "id": "p-u1-l1-04",
+            "action": "play"
+          },
+          {
+            "id": "p-u1-l1-05",
+            "action": "play"
+          },
+          {
+            "id": "p-u1-l1-06",
+            "action": "play"
+          },
+          {
+            "id": "p-u1-l1-07",
+            "action": "play"
+          },
+          {
+            "id": "p-u1-l1-08",
+            "action": "play"
+          },
+          {
+            "id": "p-u1-l1-09",
+            "action": "play"
+          },
+          {
+            "id": "p-u1-l1-10",
+            "action": "play"
+          }
+        ]
+      },
+      "note": null
+    },
+    {
+      "name": "rork prompting.json p-u1-l2",
+      "lesson": {
+        "id": "p-u1-l2",
+        "title": "Task",
+        "symbol": "checkmark.circle.fill",
+        "exercises": [
+          {
+            "id": "p-u1-l2-01",
+            "type": "multipleChoice",
+            "instruction": "What is the “task” in a prompt?",
+            "options": [
+              "The exact thing you want the AI to do",
+              "The AI tool’s name",
+              "Your opinion of AI",
+              "The time of day"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "The task is the action: summarise, draft, compare, brainstorm, explain…",
+            "concepts": [
+              "task"
+            ],
+            "difficulty": [
+              "recognition"
+            ]
+          },
+          {
+            "id": "p-u1-l2-02",
+            "type": "pickPrompt",
+            "instruction": "Pick the prompt with the clearest task",
+            "context": "You have a long article and little time.",
+            "options": [
+              "This article is long.",
+              "Summarise this article in 5 bullet points for someone with 2 minutes.",
+              "Thoughts on this article?"
+            ],
+            "answer": [
+              1
+            ],
+            "explanation": "“Summarise” is a clear verb, and the details make the goal concrete.",
+            "concepts": [
+              "task"
+            ],
+            "difficulty": [
+              "recognition"
+            ]
+          },
+          {
+            "id": "p-u1-l2-03",
+            "type": "multipleChoice",
+            "instruction": "Which word makes the strongest task verb?",
+            "options": [
+              "Stuff",
+              "Compare",
+              "Things",
+              "Maybe"
+            ],
+            "answer": [
+              1
+            ],
+            "explanation": "Action verbs like compare, draft, list or explain tell the AI exactly what to do.",
+            "concepts": [
+              "task"
+            ],
+            "difficulty": [
+              "recognition"
+            ]
+          },
+          {
+            "id": "p-u1-l2-04",
+            "type": "matchPairs",
+            "instruction": "Match the verb to its result",
+            "pairs": [
+              [
+                "Summarise",
+                "A shorter version"
+              ],
+              [
+                "Brainstorm",
+                "Lots of ideas"
+              ],
+              [
+                "Compare",
+                "Similarities and differences"
+              ],
+              [
+                "Rewrite",
+                "Same idea, new words"
+              ]
+            ],
+            "explanation": "Picking the right verb is half of a good task.",
+            "concepts": [
+              "task"
+            ],
+            "difficulty": [
+              "constrained"
+            ]
+          },
+          {
+            "id": "p-u1-l2-05",
+            "type": "fillBlank",
+            "instruction": "Fill in the blank",
+            "context": "You can’t decide between two phones.",
+            "template": "___ the Pixel and the iPhone on battery, camera and price.",
+            "options": [
+              "Compare",
+              "Ignore",
+              "Celebrate"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "“Compare” sets up a side-by-side answer on the points you care about.",
+            "concepts": [
+              "task"
+            ],
+            "difficulty": [
+              "constrained"
+            ]
+          },
+          {
+            "id": "p-u1-l2-06",
+            "type": "buildPrompt",
+            "instruction": "Build the prompt",
+            "context": "Get party theme ideas.",
+            "tiles": [
+              "Brainstorm",
+              "10 fun themes",
+              "for a 30th",
+              "birthday party"
+            ],
+            "distractors": [
+              "never",
+              "the weather"
+            ],
+            "explanation": "Verb, quantity and situation make a crisp task.",
+            "concepts": [
+              "task"
+            ],
+            "difficulty": [
+              "constrained"
+            ]
+          },
+          {
+            "id": "p-u1-l2-07",
+            "type": "pickPrompt",
+            "instruction": "Which prompt asks for ONE clear task?",
+            "context": "You’re preparing for a meeting.",
+            "options": [
+              "Write the agenda, also book a room, also what’s a good lunch, also motivate me",
+              "Draft a 30-minute agenda for a project kickoff meeting with 5 people."
+            ],
+            "answer": [
+              1
+            ],
+            "explanation": "One clear task per prompt usually gets better results. Chain extra tasks afterwards.",
+            "concepts": [
+              "task"
+            ],
+            "difficulty": [
+              "production"
+            ]
+          },
+          {
+            "id": "p-u1-l2-08",
+            "type": "spotProblem",
+            "instruction": "Tap the sentence that doesn’t do the task",
+            "context": "List 3 tips for falling asleep faster.",
+            "segments": [
+              "1. Keep a consistent bedtime, even on weekends.",
+              "2. Avoid screens for 30 minutes before bed.",
+              "Sleep has fascinated philosophers for thousands of years.",
+              "3. Keep your bedroom cool and dark."
+            ],
+            "answer": [
+              2
+            ],
+            "explanation": "That line is filler. The task was a list of tips, so stay on task.",
+            "concepts": [
+              "task"
+            ],
+            "difficulty": [
+              "production"
+            ]
+          },
+          {
+            "id": "p-u1-l2-09",
+            "type": "fillBlank",
+            "instruction": "Fill in the blank",
+            "context": "Your email sounds too stiff.",
+            "template": "___ this email so it sounds warmer but still professional.",
+            "options": [
+              "Rewrite",
+              "Delete",
+              "Count"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "“Rewrite” keeps your meaning while changing the wording.",
+            "concepts": [
+              "task"
+            ],
+            "difficulty": [
+              "production"
+            ]
+          },
+          {
+            "id": "p-u1-l2-10",
+            "type": "multipleChoice",
+            "instruction": "“Explain photosynthesis simply.” What is the task verb?",
+            "options": [
+              "photosynthesis",
+              "Explain",
+              "simply"
+            ],
+            "answer": [
+              1
+            ],
+            "explanation": "Nice! “Explain” is the action you’re asking for.",
+            "concepts": [
+              "task"
+            ],
+            "difficulty": [
+              "confidence"
+            ]
+          }
+        ]
+      },
+      "caps": {
+        "client": "rork-ios@4fe5be7",
+        "formatVersion": 1,
+        "stepTypes": {
+          "multipleChoice": 1,
+          "pickPrompt": 1,
+          "fillBlank": 1,
+          "buildPrompt": 1,
+          "spotProblem": 1,
+          "matchPairs": 1
+        }
+      },
+      "decode": "ok",
+      "expect": {
+        "playable": true,
+        "reason": null,
+        "steps": [
+          {
+            "id": "p-u1-l2-01",
+            "action": "play"
+          },
+          {
+            "id": "p-u1-l2-02",
+            "action": "play"
+          },
+          {
+            "id": "p-u1-l2-03",
+            "action": "play"
+          },
+          {
+            "id": "p-u1-l2-04",
+            "action": "play"
+          },
+          {
+            "id": "p-u1-l2-05",
+            "action": "play"
+          },
+          {
+            "id": "p-u1-l2-06",
+            "action": "play"
+          },
+          {
+            "id": "p-u1-l2-07",
+            "action": "play"
+          },
+          {
+            "id": "p-u1-l2-08",
+            "action": "play"
+          },
+          {
+            "id": "p-u1-l2-09",
+            "action": "play"
+          },
+          {
+            "id": "p-u1-l2-10",
+            "action": "play"
+          }
+        ]
+      },
+      "note": null
+    },
+    {
+      "name": "rork prompting.json p-u1-l3",
+      "lesson": {
+        "id": "p-u1-l3",
+        "title": "Context",
+        "symbol": "doc.text.fill",
+        "exercises": [
+          {
+            "id": "p-u1-l3-01",
+            "type": "multipleChoice",
+            "instruction": "Why add context to a prompt?",
+            "options": [
+              "AI can’t read your mind, so background makes the answer fit you",
+              "It makes the prompt look longer",
+              "AI charges less for long prompts",
+              "Context is only for experts"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Who it’s for, why, and any constraints turn a generic answer into a useful one.",
+            "concepts": [
+              "context"
+            ],
+            "difficulty": [
+              "recognition"
+            ]
+          },
+          {
+            "id": "p-u1-l3-02",
+            "type": "pickPrompt",
+            "instruction": "Pick the better prompt",
+            "context": "You want dinner ideas.",
+            "options": [
+              "Give me dinner ideas.",
+              "Give me 5 dinner ideas. I’m vegetarian, have 20 minutes, and only a microwave and a kettle."
+            ],
+            "answer": [
+              1
+            ],
+            "explanation": "Diet, time and equipment rule out useless suggestions.",
+            "concepts": [
+              "context"
+            ],
+            "difficulty": [
+              "recognition"
+            ]
+          },
+          {
+            "id": "p-u1-l3-03",
+            "type": "multipleChoice",
+            "instruction": "Which detail is useful context for a gift idea prompt?",
+            "options": [
+              "My favourite colour is blue",
+              "My dad is 60, loves gardening, budget $50",
+              "AI is cool",
+              "Today is Tuesday"
+            ],
+            "answer": [
+              1
+            ],
+            "explanation": "The recipient, interests and budget are what shape good gift ideas.",
+            "concepts": [
+              "context"
+            ],
+            "difficulty": [
+              "recognition"
+            ]
+          },
+          {
+            "id": "p-u1-l3-04",
+            "type": "matchPairs",
+            "instruction": "Match the context type to an example",
+            "pairs": [
+              [
+                "Audience",
+                "For a 10-year-old"
+              ],
+              [
+                "Goal",
+                "So I can pass my exam"
+              ],
+              [
+                "Constraint",
+                "Budget under $200"
+              ],
+              [
+                "Background",
+                "I’m new to the team"
+              ]
+            ],
+            "explanation": "Audience, goal, constraints and background are the four big kinds of context.",
+            "concepts": [
+              "context"
+            ],
+            "difficulty": [
+              "constrained"
+            ]
+          },
+          {
+            "id": "p-u1-l3-05",
+            "type": "fillBlank",
+            "instruction": "Fill in the blank",
+            "context": "You’re explaining your job to kids on career day.",
+            "template": "Explain what a data analyst does ___.",
+            "options": [
+              "to a class of 8-year-olds",
+              "in Latin",
+              "as fast as possible"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Naming the audience changes vocabulary and examples.",
+            "concepts": [
+              "context"
+            ],
+            "difficulty": [
+              "constrained"
+            ]
+          },
+          {
+            "id": "p-u1-l3-06",
+            "type": "buildPrompt",
+            "instruction": "Build the prompt",
+            "context": "Plan a weekend trip.",
+            "tiles": [
+              "Plan a 2-day trip",
+              "to Rome",
+              "for two people",
+              "on a $400 budget"
+            ],
+            "distractors": [
+              "purple",
+              "whatever"
+            ],
+            "explanation": "Destination, group size and budget give the AI what it needs.",
+            "concepts": [
+              "context",
+              "task"
+            ],
+            "difficulty": [
+              "constrained"
+            ]
+          },
+          {
+            "id": "p-u1-l3-07",
+            "type": "spotProblem",
+            "instruction": "Tap the part that ignores the context",
+            "context": "I’m vegan. Suggest a quick protein-rich breakfast.",
+            "segments": [
+              "Try overnight oats with soy milk and chia seeds.",
+              "Tofu scramble with spinach takes about 10 minutes.",
+              "Greek yogurt with honey is another great option.",
+              "A peanut butter banana smoothie works on busy days."
+            ],
+            "answer": [
+              2
+            ],
+            "explanation": "Greek yogurt and honey aren’t vegan. Always check the reply respects your context.",
+            "concepts": [
+              "context",
+              "verification"
+            ],
+            "difficulty": [
+              "production"
+            ]
+          },
+          {
+            "id": "p-u1-l3-08",
+            "type": "pickPrompt",
+            "instruction": "Which prompt gives the most helpful context?",
+            "context": "You need help with a cover letter.",
+            "options": [
+              "Write a cover letter.",
+              "Write a cover letter for a junior UX designer role at a nonprofit. I have 1 year of freelance experience and care about accessibility.",
+              "Write a cover letter, make it good."
+            ],
+            "answer": [
+              1
+            ],
+            "explanation": "Role, employer type, experience and values make the letter personal.",
+            "concepts": [
+              "context"
+            ],
+            "difficulty": [
+              "production"
+            ]
+          },
+          {
+            "id": "p-u1-l3-09",
+            "type": "fillBlank",
+            "instruction": "Fill in the blank",
+            "context": "You’re about to paste meeting notes.",
+            "template": "___ Below are my notes from today’s meeting. Turn them into action items.",
+            "options": [
+              "Context:",
+              "Goodbye.",
+              "Ignore this."
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Labelling pasted material helps the AI separate instructions from content.",
+            "concepts": [
+              "context"
+            ],
+            "difficulty": [
+              "production"
+            ]
+          },
+          {
+            "id": "p-u1-l3-10",
+            "type": "multipleChoice",
+            "instruction": "“For a beginner” is an example of…",
+            "options": [
+              "Context about the audience",
+              "A role",
+              "A file format"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Exactly. Audience context helps the AI pitch its answer.",
+            "concepts": [
+              "context"
+            ],
+            "difficulty": [
+              "confidence"
+            ]
+          }
+        ]
+      },
+      "caps": {
+        "client": "rork-ios@4fe5be7",
+        "formatVersion": 1,
+        "stepTypes": {
+          "multipleChoice": 1,
+          "pickPrompt": 1,
+          "fillBlank": 1,
+          "buildPrompt": 1,
+          "spotProblem": 1,
+          "matchPairs": 1
+        }
+      },
+      "decode": "ok",
+      "expect": {
+        "playable": true,
+        "reason": null,
+        "steps": [
+          {
+            "id": "p-u1-l3-01",
+            "action": "play"
+          },
+          {
+            "id": "p-u1-l3-02",
+            "action": "play"
+          },
+          {
+            "id": "p-u1-l3-03",
+            "action": "play"
+          },
+          {
+            "id": "p-u1-l3-04",
+            "action": "play"
+          },
+          {
+            "id": "p-u1-l3-05",
+            "action": "play"
+          },
+          {
+            "id": "p-u1-l3-06",
+            "action": "play"
+          },
+          {
+            "id": "p-u1-l3-07",
+            "action": "play"
+          },
+          {
+            "id": "p-u1-l3-08",
+            "action": "play"
+          },
+          {
+            "id": "p-u1-l3-09",
+            "action": "play"
+          },
+          {
+            "id": "p-u1-l3-10",
+            "action": "play"
+          }
+        ]
+      },
+      "note": null
+    },
+    {
+      "name": "rork prompting.json p-u1-l4",
+      "lesson": {
+        "id": "p-u1-l4",
+        "title": "Format",
+        "symbol": "list.bullet.rectangle.fill",
+        "exercises": [
+          {
+            "id": "p-u1-l4-01",
+            "type": "multipleChoice",
+            "instruction": "What does “format” mean in a prompt?",
+            "options": [
+              "The shape of the answer: list, table, email, length",
+              "Deleting your history",
+              "The AI’s mood",
+              "The font size on screen"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Asking for a specific format saves you from re-editing the reply.",
+            "concepts": [
+              "format"
+            ],
+            "difficulty": [
+              "recognition"
+            ]
+          },
+          {
+            "id": "p-u1-l4-02",
+            "type": "pickPrompt",
+            "instruction": "Pick the better prompt",
+            "context": "You’re comparing three laptops.",
+            "options": [
+              "Tell me about these 3 laptops.",
+              "Compare these 3 laptops in a table with columns for price, weight, battery life and best for."
+            ],
+            "answer": [
+              1
+            ],
+            "explanation": "A table with named columns is perfect for side-by-side comparisons.",
+            "concepts": [
+              "format"
+            ],
+            "difficulty": [
+              "recognition"
+            ]
+          },
+          {
+            "id": "p-u1-l4-03",
+            "type": "matchPairs",
+            "instruction": "Match the need to the best format",
+            "pairs": [
+              [
+                "Compare options",
+                "Table"
+              ],
+              [
+                "Quick tips",
+                "Bullet list"
+              ],
+              [
+                "Message a client",
+                "Email"
+              ],
+              [
+                "Follow a recipe",
+                "Numbered steps"
+              ]
+            ],
+            "explanation": "The right format makes the answer instantly usable.",
+            "concepts": [
+              "format"
+            ],
+            "difficulty": [
+              "recognition"
+            ]
+          },
+          {
+            "id": "p-u1-l4-04",
+            "type": "fillBlank",
+            "instruction": "Fill in the blank",
+            "context": "You want something you can read in the lift.",
+            "template": "Summarise this report in ___.",
+            "options": [
+              "3 short bullet points",
+              "as many words as possible",
+              "a 20-page essay"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Length limits are format instructions too.",
+            "concepts": [
+              "format"
+            ],
+            "difficulty": [
+              "constrained"
+            ]
+          },
+          {
+            "id": "p-u1-l4-05",
+            "type": "buildPrompt",
+            "instruction": "Build the prompt",
+            "context": "Get a packing checklist.",
+            "tiles": [
+              "Create a",
+              "packing checklist",
+              "for a beach week",
+              "as a numbered list"
+            ],
+            "distractors": [
+              "in secret",
+              "upside down"
+            ],
+            "explanation": "Task, topic and format in one tidy sentence.",
+            "concepts": [
+              "format",
+              "task"
+            ],
+            "difficulty": [
+              "constrained"
+            ]
+          },
+          {
+            "id": "p-u1-l4-06",
+            "type": "multipleChoice",
+            "instruction": "Which phrase sets tone, a kind of format?",
+            "options": [
+              "“in a warm, casual tone”",
+              "“about dogs”",
+              "“for Monday”"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Tone is part of how the answer should look and feel.",
+            "concepts": [
+              "format",
+              "tone"
+            ],
+            "difficulty": [
+              "constrained"
+            ]
+          },
+          {
+            "id": "p-u1-l4-07",
+            "type": "spotProblem",
+            "instruction": "Tap the part that breaks the requested format",
+            "context": "Give me 3 bullet points, each under 10 words, on staying focused.",
+            "segments": [
+              "• Put your phone in another room.",
+              "• Work in 25-minute blocks.",
+              "• Focus is a complex cognitive state shaped by sleep, nutrition, environment and motivation, so it’s worth reflecting on all of these factors in depth.",
+              "• Take short walking breaks."
+            ],
+            "answer": [
+              2
+            ],
+            "explanation": "That bullet is way over 10 words, and there are 4 bullets instead of 3!",
+            "concepts": [
+              "format",
+              "verification"
+            ],
+            "difficulty": [
+              "production"
+            ]
+          },
+          {
+            "id": "p-u1-l4-08",
+            "type": "pickPrompt",
+            "instruction": "Which prompt gets a reply you could paste straight into Slack?",
+            "context": "You’re announcing a team lunch.",
+            "options": [
+              "Team lunch announcement.",
+              "Write a 2-sentence Slack message announcing team lunch Friday at 12:30, friendly tone, one emoji max."
+            ],
+            "answer": [
+              1
+            ],
+            "explanation": "Length, channel, tone and emoji rule leave nothing to guess.",
+            "concepts": [
+              "format"
+            ],
+            "difficulty": [
+              "production"
+            ]
+          },
+          {
+            "id": "p-u1-l4-09",
+            "type": "fillBlank",
+            "instruction": "Fill in the blank",
+            "context": "You want to import the answer into a spreadsheet.",
+            "template": "List 10 popular houseplants with their light needs ___.",
+            "options": [
+              "as CSV with headers name,light",
+              "as a poem",
+              "in emojis only"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Asking for CSV makes the output machine-friendly.",
+            "concepts": [
+              "format"
+            ],
+            "difficulty": [
+              "production"
+            ]
+          },
+          {
+            "id": "p-u1-l4-10",
+            "type": "multipleChoice",
+            "instruction": "“Answer in one sentence” is a…",
+            "options": [
+              "Format instruction",
+              "Role",
+              "Hallucination"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "You’ve got it. Short, clear format rules work wonders.",
+            "concepts": [
+              "format"
+            ],
+            "difficulty": [
+              "confidence"
+            ]
+          }
+        ]
+      },
+      "caps": {
+        "client": "rork-ios@4fe5be7",
+        "formatVersion": 1,
+        "stepTypes": {
+          "multipleChoice": 1,
+          "pickPrompt": 1,
+          "fillBlank": 1,
+          "buildPrompt": 1,
+          "spotProblem": 1,
+          "matchPairs": 1
+        }
+      },
+      "decode": "ok",
+      "expect": {
+        "playable": true,
+        "reason": null,
+        "steps": [
+          {
+            "id": "p-u1-l4-01",
+            "action": "play"
+          },
+          {
+            "id": "p-u1-l4-02",
+            "action": "play"
+          },
+          {
+            "id": "p-u1-l4-03",
+            "action": "play"
+          },
+          {
+            "id": "p-u1-l4-04",
+            "action": "play"
+          },
+          {
+            "id": "p-u1-l4-05",
+            "action": "play"
+          },
+          {
+            "id": "p-u1-l4-06",
+            "action": "play"
+          },
+          {
+            "id": "p-u1-l4-07",
+            "action": "play"
+          },
+          {
+            "id": "p-u1-l4-08",
+            "action": "play"
+          },
+          {
+            "id": "p-u1-l4-09",
+            "action": "play"
+          },
+          {
+            "id": "p-u1-l4-10",
+            "action": "play"
+          }
+        ]
+      },
+      "note": null
+    },
+    {
+      "name": "rork prompting.json p-u1-l5",
+      "lesson": {
+        "id": "p-u1-l5",
+        "title": "Iterate",
+        "symbol": "arrow.triangle.2.circlepath",
+        "exercises": [
+          {
+            "id": "p-u1-l5-01",
+            "type": "multipleChoice",
+            "instruction": "The first reply isn’t quite right. Best next move?",
+            "options": [
+              "Give up on AI",
+              "Reply with specific feedback on what to change",
+              "Paste the same prompt again",
+              "Type “wrong”"
+            ],
+            "answer": [
+              1
+            ],
+            "explanation": "AI chats are conversations. Specific follow-ups get you there fast.",
+            "concepts": [
+              "iterate"
+            ],
+            "difficulty": [
+              "recognition"
+            ]
+          },
+          {
+            "id": "p-u1-l5-02",
+            "type": "pickPrompt",
+            "instruction": "Pick the better follow-up",
+            "context": "The AI wrote a birthday message that’s too long and formal.",
+            "options": [
+              "No.",
+              "Shorter and more playful please: max 2 sentences, and mention her love of karaoke."
+            ],
+            "answer": [
+              1
+            ],
+            "explanation": "Say what to change and how. Length, tone, and a personal detail.",
+            "concepts": [
+              "iterate"
+            ],
+            "difficulty": [
+              "recognition"
+            ]
+          },
+          {
+            "id": "p-u1-l5-03",
+            "type": "matchPairs",
+            "instruction": "Match the problem to the follow-up",
+            "pairs": [
+              [
+                "Too long",
+                "Cut it to 50 words"
+              ],
+              [
+                "Too formal",
+                "Make it casual"
+              ],
+              [
+                "Too vague",
+                "Add 2 concrete examples"
+              ],
+              [
+                "Wrong audience",
+                "Rewrite for teenagers"
+              ]
+            ],
+            "explanation": "Name the problem, then give the fix.",
+            "concepts": [
+              "iterate"
+            ],
+            "difficulty": [
+              "constrained"
+            ]
+          },
+          {
+            "id": "p-u1-l5-04",
+            "type": "fillBlank",
+            "instruction": "Fill in the blank",
+            "context": "You like idea #3 from a brainstorm.",
+            "template": "I like idea 3. ___ it into a 5-step plan.",
+            "options": [
+              "Expand",
+              "Forget",
+              "Hide"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Building on a good part of the reply is classic iteration.",
+            "concepts": [
+              "iterate"
+            ],
+            "difficulty": [
+              "constrained"
+            ]
+          },
+          {
+            "id": "p-u1-l5-05",
+            "type": "buildPrompt",
+            "instruction": "Build the follow-up",
+            "context": "The AI’s blog intro is boring.",
+            "tiles": [
+              "Rewrite the intro",
+              "with a surprising fact",
+              "in under",
+              "40 words"
+            ],
+            "distractors": [
+              "maybe never",
+              "the end"
+            ],
+            "explanation": "Clear fix plus a constraint. Perfect follow-up.",
+            "concepts": [
+              "iterate",
+              "format"
+            ],
+            "difficulty": [
+              "constrained"
+            ]
+          },
+          {
+            "id": "p-u1-l5-06",
+            "type": "multipleChoice",
+            "instruction": "When might you start a fresh chat instead of iterating?",
+            "options": [
+              "When the conversation has drifted far off-topic",
+              "After every single reply",
+              "Never, ever",
+              "When it’s raining"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Long, tangled chats can confuse the AI. A clean start with a better prompt helps.",
+            "concepts": [
+              "iterate"
+            ],
+            "difficulty": [
+              "constrained"
+            ]
+          },
+          {
+            "id": "p-u1-l5-07",
+            "type": "spotProblem",
+            "instruction": "Tap the vague follow-up",
+            "context": "Four follow-ups to an AI-written product description:",
+            "segments": [
+              "“Make it 30% shorter.”",
+              "“Add one line about the 2-year warranty.”",
+              "“Make it better.”",
+              "“Use a confident, upbeat tone.”"
+            ],
+            "answer": [
+              2
+            ],
+            "explanation": "“Better” how? Specific feedback gets specific improvements.",
+            "concepts": [
+              "iterate"
+            ],
+            "difficulty": [
+              "production"
+            ]
+          },
+          {
+            "id": "p-u1-l5-08",
+            "type": "pickPrompt",
+            "instruction": "Pick the strongest follow-up",
+            "context": "The AI’s workout plan includes running, but you have bad knees.",
+            "options": [
+              "Hmm, not great.",
+              "I have bad knees. Replace running with low-impact cardio like cycling or swimming, and keep the rest.",
+              "Start over completely."
+            ],
+            "answer": [
+              1
+            ],
+            "explanation": "Add the missing context, say what to swap, and what to keep.",
+            "concepts": [
+              "iterate",
+              "context"
+            ],
+            "difficulty": [
+              "production"
+            ]
+          },
+          {
+            "id": "p-u1-l5-09",
+            "type": "fillBlank",
+            "instruction": "Fill in the blank",
+            "context": "You want the AI to help improve your own prompt.",
+            "template": "Before answering, ask me ___ questions that would help you do this better.",
+            "options": [
+              "3 clarifying",
+              "zero",
+              "random"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Inviting the AI to ask questions is a power move for tricky tasks.",
+            "concepts": [
+              "iterate",
+              "context"
+            ],
+            "difficulty": [
+              "production"
+            ]
+          },
+          {
+            "id": "p-u1-l5-10",
+            "type": "multipleChoice",
+            "instruction": "Role, task, context, format, iterate. Which one means “refine the reply”?",
+            "options": [
+              "Iterate",
+              "Role",
+              "Format"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Unit complete energy! You now know all five building blocks.",
+            "concepts": [
+              "iterate"
+            ],
+            "difficulty": [
+              "confidence"
+            ]
+          }
+        ]
+      },
+      "caps": {
+        "client": "rork-ios@4fe5be7",
+        "formatVersion": 1,
+        "stepTypes": {
+          "multipleChoice": 1,
+          "pickPrompt": 1,
+          "fillBlank": 1,
+          "buildPrompt": 1,
+          "spotProblem": 1,
+          "matchPairs": 1
+        }
+      },
+      "decode": "ok",
+      "expect": {
+        "playable": true,
+        "reason": null,
+        "steps": [
+          {
+            "id": "p-u1-l5-01",
+            "action": "play"
+          },
+          {
+            "id": "p-u1-l5-02",
+            "action": "play"
+          },
+          {
+            "id": "p-u1-l5-03",
+            "action": "play"
+          },
+          {
+            "id": "p-u1-l5-04",
+            "action": "play"
+          },
+          {
+            "id": "p-u1-l5-05",
+            "action": "play"
+          },
+          {
+            "id": "p-u1-l5-06",
+            "action": "play"
+          },
+          {
+            "id": "p-u1-l5-07",
+            "action": "play"
+          },
+          {
+            "id": "p-u1-l5-08",
+            "action": "play"
+          },
+          {
+            "id": "p-u1-l5-09",
+            "action": "play"
+          },
+          {
+            "id": "p-u1-l5-10",
+            "action": "play"
+          }
+        ]
+      },
+      "note": null
+    },
+    {
+      "name": "rork prompting.json p-u2-l1",
+      "lesson": {
+        "id": "p-u2-l1",
+        "title": "Constraints",
+        "symbol": "ruler.fill",
+        "exercises": [
+          {
+            "id": "p-u2-l1-01",
+            "type": "multipleChoice",
+            "instruction": "What is a constraint?",
+            "options": [
+              "A rule the answer must follow, like length or budget",
+              "A type of AI model",
+              "An error message",
+              "A secret password"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Constraints narrow the answer to what you can actually use.",
+            "concepts": [
+              "constraints"
+            ],
+            "difficulty": [
+              "recognition"
+            ]
+          },
+          {
+            "id": "p-u2-l1-02",
+            "type": "pickPrompt",
+            "instruction": "Pick the better prompt",
+            "context": "You want a date-night idea.",
+            "options": [
+              "Date night ideas",
+              "3 date-night ideas at home, under $30, no cooking, ready in 1 hour"
+            ],
+            "answer": [
+              1
+            ],
+            "explanation": "Budget, location, effort and time all filter the ideas.",
+            "concepts": [
+              "constraints"
+            ],
+            "difficulty": [
+              "recognition"
+            ]
+          },
+          {
+            "id": "p-u2-l1-03",
+            "type": "matchPairs",
+            "instruction": "Match the constraint to its type",
+            "pairs": [
+              [
+                "Under 100 words",
+                "Length"
+              ],
+              [
+                "Under $50",
+                "Budget"
+              ],
+              [
+                "No jargon",
+                "Style"
+              ],
+              [
+                "By 5 pm",
+                "Time"
+              ]
+            ],
+            "explanation": "Mix and match constraints to shape answers.",
+            "concepts": [
+              "constraints"
+            ],
+            "difficulty": [
+              "constrained"
+            ]
+          },
+          {
+            "id": "p-u2-l1-04",
+            "type": "fillBlank",
+            "instruction": "Fill in the blank",
+            "context": "Your audience hates corporate speak.",
+            "template": "Explain our new policy in plain English, ___.",
+            "options": [
+              "no jargon",
+              "lots of acronyms",
+              "in legalese"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "“No jargon” is a style constraint that keeps it readable.",
+            "concepts": [
+              "constraints"
+            ],
+            "difficulty": [
+              "constrained"
+            ]
+          },
+          {
+            "id": "p-u2-l1-05",
+            "type": "buildPrompt",
+            "instruction": "Build the prompt",
+            "context": "A quick team-building game.",
+            "tiles": [
+              "Suggest one",
+              "team game",
+              "that takes 10 minutes",
+              "and needs no props"
+            ],
+            "distractors": [
+              "forever",
+              "pineapple"
+            ],
+            "explanation": "Two clear constraints: time and props.",
+            "concepts": [
+              "constraints"
+            ],
+            "difficulty": [
+              "constrained"
+            ]
+          },
+          {
+            "id": "p-u2-l1-06",
+            "type": "spotProblem",
+            "instruction": "Tap the idea that breaks a constraint",
+            "context": "Suggest 3 free weekend activities in the city.",
+            "segments": [
+              "Visit a public park and have a picnic.",
+              "Explore the free modern art museum on Sunday.",
+              "Book a $90 hot-air balloon ride at sunrise.",
+              "Join a free walking tour (tips optional)."
+            ],
+            "answer": [
+              2
+            ],
+            "explanation": "$90 isn’t free! Check replies against every constraint you set.",
+            "concepts": [
+              "constraints",
+              "verification"
+            ],
+            "difficulty": [
+              "production"
+            ]
+          },
+          {
+            "id": "p-u2-l1-07",
+            "type": "pickPrompt",
+            "instruction": "Which prompt has the most useful constraints?",
+            "context": "A toast at your sister’s wedding.",
+            "options": [
+              "Write a wedding toast.",
+              "Write a 90-second wedding toast for my sister Mia: heartfelt, one gentle joke about her terrible parallel parking, no inside jokes guests won’t get."
+            ],
+            "answer": [
+              1
+            ],
+            "explanation": "Length, tone and guardrails make it speech-ready.",
+            "concepts": [
+              "constraints"
+            ],
+            "difficulty": [
+              "production"
+            ]
+          },
+          {
+            "id": "p-u2-l1-08",
+            "type": "fillBlank",
+            "instruction": "Fill in the blank",
+            "context": "You only want the answer, not an essay.",
+            "template": "What’s the capital of Australia? ___",
+            "options": [
+              "Answer in one word.",
+              "Write 5 paragraphs.",
+              "Use a table."
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Tiny questions deserve tiny answers. Say so!",
+            "concepts": [
+              "constraints",
+              "format"
+            ],
+            "difficulty": [
+              "production"
+            ]
+          },
+          {
+            "id": "p-u2-l1-09",
+            "type": "multipleChoice",
+            "instruction": "Too many constraints can…",
+            "options": [
+              "Make the task impossible or contradictory",
+              "Never cause problems",
+              "Break your phone"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Keep constraints that matter and make sure they don’t clash.",
+            "concepts": [
+              "constraints"
+            ],
+            "difficulty": [
+              "confidence"
+            ]
+          }
+        ]
+      },
+      "caps": {
+        "client": "rork-ios@4fe5be7",
+        "formatVersion": 1,
+        "stepTypes": {
+          "multipleChoice": 1,
+          "pickPrompt": 1,
+          "fillBlank": 1,
+          "buildPrompt": 1,
+          "spotProblem": 1,
+          "matchPairs": 1
+        }
+      },
+      "decode": "ok",
+      "expect": {
+        "playable": true,
+        "reason": null,
+        "steps": [
+          {
+            "id": "p-u2-l1-01",
+            "action": "play"
+          },
+          {
+            "id": "p-u2-l1-02",
+            "action": "play"
+          },
+          {
+            "id": "p-u2-l1-03",
+            "action": "play"
+          },
+          {
+            "id": "p-u2-l1-04",
+            "action": "play"
+          },
+          {
+            "id": "p-u2-l1-05",
+            "action": "play"
+          },
+          {
+            "id": "p-u2-l1-06",
+            "action": "play"
+          },
+          {
+            "id": "p-u2-l1-07",
+            "action": "play"
+          },
+          {
+            "id": "p-u2-l1-08",
+            "action": "play"
+          },
+          {
+            "id": "p-u2-l1-09",
+            "action": "play"
+          }
+        ]
+      },
+      "note": null
+    },
+    {
+      "name": "rork prompting.json p-u2-l2",
+      "lesson": {
+        "id": "p-u2-l2",
+        "title": "Audience & tone",
+        "symbol": "person.2.fill",
+        "exercises": [
+          {
+            "id": "p-u2-l2-01",
+            "type": "multipleChoice",
+            "instruction": "Why name your audience?",
+            "options": [
+              "So the AI picks the right words, depth and examples",
+              "It’s required by law",
+              "It makes replies longer",
+              "It doesn’t matter"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "A CEO and a 7-year-old need very different explanations.",
+            "concepts": [
+              "audience"
+            ],
+            "difficulty": [
+              "recognition"
+            ]
+          },
+          {
+            "id": "p-u2-l2-02",
+            "type": "pickPrompt",
+            "instruction": "Pick the better prompt",
+            "context": "Explain inflation.",
+            "options": [
+              "Explain inflation.",
+              "Explain inflation to a 12-year-old using an example about the price of pizza."
+            ],
+            "answer": [
+              1
+            ],
+            "explanation": "Audience plus a relatable example equals clarity.",
+            "concepts": [
+              "audience"
+            ],
+            "difficulty": [
+              "recognition"
+            ]
+          },
+          {
+            "id": "p-u2-l2-03",
+            "type": "matchPairs",
+            "instruction": "Match audience to tone",
+            "pairs": [
+              [
+                "New customer",
+                "Welcoming"
+              ],
+              [
+                "Upset client",
+                "Calm and empathetic"
+              ],
+              [
+                "Close friend",
+                "Casual"
+              ],
+              [
+                "Board of directors",
+                "Concise and formal"
+              ]
+            ],
+            "explanation": "Tone should fit who’s reading.",
+            "concepts": [
+              "audience",
+              "tone"
+            ],
+            "difficulty": [
+              "constrained"
+            ]
+          },
+          {
+            "id": "p-u2-l2-04",
+            "type": "fillBlank",
+            "instruction": "Fill in the blank",
+            "context": "A customer’s order arrived broken.",
+            "template": "Write a reply to this customer in an ___ tone, offering a free replacement.",
+            "options": [
+              "empathetic",
+              "sarcastic",
+              "bored"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Empathy first turns a complaint into loyalty.",
+            "concepts": [
+              "tone"
+            ],
+            "difficulty": [
+              "constrained"
+            ]
+          },
+          {
+            "id": "p-u2-l2-05",
+            "type": "buildPrompt",
+            "instruction": "Build the prompt",
+            "context": "Introduce yourself to a new team.",
+            "tiles": [
+              "Write a short",
+              "friendly intro",
+              "for my new team",
+              "in under 80 words"
+            ],
+            "distractors": [
+              "angrily",
+              "in Morse code"
+            ],
+            "explanation": "Tone, audience and length all set.",
+            "concepts": [
+              "audience",
+              "tone"
+            ],
+            "difficulty": [
+              "constrained"
+            ]
+          },
+          {
+            "id": "p-u2-l2-06",
+            "type": "spotProblem",
+            "instruction": "Tap the sentence with the wrong tone",
+            "context": "Write a gentle reminder to a client that their invoice is 5 days overdue.",
+            "segments": [
+              "Hi Sam, I hope your week is going well.",
+              "Just a friendly nudge that invoice #204 was due last Monday.",
+              "Pay immediately or face consequences.",
+              "Let me know if you have any questions. Thanks so much!"
+            ],
+            "answer": [
+              2
+            ],
+            "explanation": "That line is a threat, not a gentle reminder.",
+            "concepts": [
+              "tone",
+              "verification"
+            ],
+            "difficulty": [
+              "production"
+            ]
+          },
+          {
+            "id": "p-u2-l2-07",
+            "type": "pickPrompt",
+            "instruction": "Which prompt fits a busy executive?",
+            "context": "Share project status upward.",
+            "options": [
+              "Write a detailed 2-page narrative of everything we did this month.",
+              "Summarise our project status in 3 bullets: progress, risks, decision needed. Executive tone."
+            ],
+            "answer": [
+              1
+            ],
+            "explanation": "Executives want the headline, risks and the ask.",
+            "concepts": [
+              "audience",
+              "format"
+            ],
+            "difficulty": [
+              "production"
+            ]
+          },
+          {
+            "id": "p-u2-l2-08",
+            "type": "fillBlank",
+            "instruction": "Fill in the blank",
+            "context": "Your gran is new to smartphones.",
+            "template": "Explain how to video-call me, step by step, ___.",
+            "options": [
+              "for someone new to smartphones",
+              "using developer terms",
+              "in one word"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Naming her experience level keeps steps simple and kind.",
+            "concepts": [
+              "audience"
+            ],
+            "difficulty": [
+              "production"
+            ]
+          },
+          {
+            "id": "p-u2-l2-09",
+            "type": "multipleChoice",
+            "instruction": "“Write it for skeptical engineers” names…",
+            "options": [
+              "The audience",
+              "The format",
+              "A deadline"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Right. And that changes how persuasive and precise the reply gets.",
+            "concepts": [
+              "audience"
+            ],
+            "difficulty": [
+              "confidence"
+            ]
+          }
+        ]
+      },
+      "caps": {
+        "client": "rork-ios@4fe5be7",
+        "formatVersion": 1,
+        "stepTypes": {
+          "multipleChoice": 1,
+          "pickPrompt": 1,
+          "fillBlank": 1,
+          "buildPrompt": 1,
+          "spotProblem": 1,
+          "matchPairs": 1
+        }
+      },
+      "decode": "ok",
+      "expect": {
+        "playable": true,
+        "reason": null,
+        "steps": [
+          {
+            "id": "p-u2-l2-01",
+            "action": "play"
+          },
+          {
+            "id": "p-u2-l2-02",
+            "action": "play"
+          },
+          {
+            "id": "p-u2-l2-03",
+            "action": "play"
+          },
+          {
+            "id": "p-u2-l2-04",
+            "action": "play"
+          },
+          {
+            "id": "p-u2-l2-05",
+            "action": "play"
+          },
+          {
+            "id": "p-u2-l2-06",
+            "action": "play"
+          },
+          {
+            "id": "p-u2-l2-07",
+            "action": "play"
+          },
+          {
+            "id": "p-u2-l2-08",
+            "action": "play"
+          },
+          {
+            "id": "p-u2-l2-09",
+            "action": "play"
+          }
+        ]
+      },
+      "note": null
+    },
+    {
+      "name": "rork prompting.json p-u2-l3",
+      "lesson": {
+        "id": "p-u2-l3",
+        "title": "Examples",
+        "symbol": "square.on.square.fill",
+        "exercises": [
+          {
+            "id": "p-u2-l3-01",
+            "type": "multipleChoice",
+            "instruction": "Why include an example in your prompt?",
+            "options": [
+              "It shows the AI the exact style or pattern you want",
+              "AI ignores examples",
+              "It hides your request",
+              "It’s rude not to"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Examples (“few-shot prompting”) are one of the fastest ways to get consistent output.",
+            "concepts": [
+              "examples"
+            ],
+            "difficulty": [
+              "recognition"
+            ]
+          },
+          {
+            "id": "p-u2-l3-02",
+            "type": "pickPrompt",
+            "instruction": "Pick the better prompt",
+            "context": "You need product names for a candle brand.",
+            "options": [
+              "Give me candle names.",
+              "Give me 10 candle names in this style: “Rainy Library”, “Sunday Pancakes”, “Cabin at Dusk”."
+            ],
+            "answer": [
+              1
+            ],
+            "explanation": "The examples show the cosy, place-and-moment naming style.",
+            "concepts": [
+              "examples"
+            ],
+            "difficulty": [
+              "recognition"
+            ]
+          },
+          {
+            "id": "p-u2-l3-03",
+            "type": "matchPairs",
+            "instruction": "Match the term to its meaning",
+            "pairs": [
+              [
+                "Zero-shot",
+                "No examples given"
+              ],
+              [
+                "One-shot",
+                "One example given"
+              ],
+              [
+                "Few-shot",
+                "Several examples given"
+              ],
+              [
+                "Template",
+                "A fill-in pattern to copy"
+              ]
+            ],
+            "explanation": "More examples usually mean more consistent results.",
+            "concepts": [
+              "examples"
+            ],
+            "difficulty": [
+              "constrained"
+            ]
+          },
+          {
+            "id": "p-u2-l3-04",
+            "type": "fillBlank",
+            "instruction": "Fill in the blank",
+            "context": "You want consistent social captions.",
+            "template": "Write 5 captions ___: “Monday fuel ☕ — what’s in your cup?”",
+            "options": [
+              "like this example",
+              "unlike anything",
+              "in French poetry"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Pointing at an example sets length, emoji use and tone at once.",
+            "concepts": [
+              "examples"
+            ],
+            "difficulty": [
+              "constrained"
+            ]
+          },
+          {
+            "id": "p-u2-l3-05",
+            "type": "buildPrompt",
+            "instruction": "Build the prompt",
+            "context": "Turn notes into tidy tasks.",
+            "tiles": [
+              "Turn my notes",
+              "into tasks",
+              "formatted like:",
+              "“[Owner] – [Task] – [Due]”"
+            ],
+            "distractors": [
+              "randomly",
+              "the moon"
+            ],
+            "explanation": "A pattern example removes all guesswork.",
+            "concepts": [
+              "examples",
+              "format"
+            ],
+            "difficulty": [
+              "constrained"
+            ]
+          },
+          {
+            "id": "p-u2-l3-06",
+            "type": "spotProblem",
+            "instruction": "Tap the output that doesn’t follow the example pattern",
+            "context": "Example: “Coffee – Energising – $4”. Give 4 more in the same pattern.",
+            "segments": [
+              "Tea – Calming – $3",
+              "Smoothie – Refreshing – $6",
+              "Hot chocolate is cosy and usually costs around five dollars.",
+              "Matcha – Focusing – $5"
+            ],
+            "answer": [
+              2
+            ],
+            "explanation": "That one ignores the “Item – Feeling – Price” pattern.",
+            "concepts": [
+              "examples",
+              "verification"
+            ],
+            "difficulty": [
+              "production"
+            ]
+          },
+          {
+            "id": "p-u2-l3-07",
+            "type": "pickPrompt",
+            "instruction": "Which prompt uses examples best?",
+            "context": "Classify customer messages.",
+            "options": [
+              "Classify these messages.",
+              "Classify each message as Billing, Bug or Praise. Examples: “I was charged twice” → Billing. “App crashes on login” → Bug. “Love the update!” → Praise."
+            ],
+            "answer": [
+              1
+            ],
+            "explanation": "Labels plus examples teach the AI the categories instantly.",
+            "concepts": [
+              "examples"
+            ],
+            "difficulty": [
+              "production"
+            ]
+          },
+          {
+            "id": "p-u2-l3-08",
+            "type": "fillBlank",
+            "instruction": "Fill in the blank",
+            "context": "Your example is long and you don’t want it copied word for word.",
+            "template": "Match the tone of this example, but ___.",
+            "options": [
+              "don’t copy its wording",
+              "copy it exactly",
+              "make it rude"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Tell the AI what to borrow (tone) and what not to (wording).",
+            "concepts": [
+              "examples"
+            ],
+            "difficulty": [
+              "production"
+            ]
+          },
+          {
+            "id": "p-u2-l3-09",
+            "type": "multipleChoice",
+            "instruction": "Giving 3 examples before your request is called…",
+            "options": [
+              "Few-shot prompting",
+              "Zero-shot prompting",
+              "Hallucinating"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "You’re officially specific. Great work finishing this unit!",
+            "concepts": [
+              "examples"
+            ],
+            "difficulty": [
+              "confidence"
+            ]
+          }
+        ]
+      },
+      "caps": {
+        "client": "rork-ios@4fe5be7",
+        "formatVersion": 1,
+        "stepTypes": {
+          "multipleChoice": 1,
+          "pickPrompt": 1,
+          "fillBlank": 1,
+          "buildPrompt": 1,
+          "spotProblem": 1,
+          "matchPairs": 1
+        }
+      },
+      "decode": "ok",
+      "expect": {
+        "playable": true,
+        "reason": null,
+        "steps": [
+          {
+            "id": "p-u2-l3-01",
+            "action": "play"
+          },
+          {
+            "id": "p-u2-l3-02",
+            "action": "play"
+          },
+          {
+            "id": "p-u2-l3-03",
+            "action": "play"
+          },
+          {
+            "id": "p-u2-l3-04",
+            "action": "play"
+          },
+          {
+            "id": "p-u2-l3-05",
+            "action": "play"
+          },
+          {
+            "id": "p-u2-l3-06",
+            "action": "play"
+          },
+          {
+            "id": "p-u2-l3-07",
+            "action": "play"
+          },
+          {
+            "id": "p-u2-l3-08",
+            "action": "play"
+          },
+          {
+            "id": "p-u2-l3-09",
+            "action": "play"
+          }
+        ]
+      },
+      "note": null
+    },
+    {
+      "name": "rork research.json r-u1-l1",
+      "lesson": {
+        "id": "r-u1-l1",
+        "title": "Hallucinations",
+        "symbol": "eye.trianglebadge.exclamationmark.fill",
+        "exercises": [
+          {
+            "id": "r-u1-l1-01",
+            "type": "multipleChoice",
+            "instruction": "What is an AI “hallucination”?",
+            "options": [
+              "A confident answer that is made up or false",
+              "When the AI shows an image",
+              "A slow reply",
+              "A system update"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "AI predicts plausible text, and plausible isn’t always true.",
+            "concepts": [
+              "hallucination"
+            ],
+            "difficulty": [
+              "recognition"
+            ]
+          },
+          {
+            "id": "r-u1-l1-02",
+            "type": "multipleChoice",
+            "instruction": "Which reply is most likely to contain a hallucination?",
+            "options": [
+              "A general explanation of photosynthesis",
+              "A very specific quote, page number and book title you’ve never heard of",
+              "A list of common fruits",
+              "A friendly greeting"
+            ],
+            "answer": [
+              1
+            ],
+            "explanation": "Super-specific citations are a classic hallucination hotspot. Always check them.",
+            "concepts": [
+              "hallucination"
+            ],
+            "difficulty": [
+              "recognition"
+            ]
+          },
+          {
+            "id": "r-u1-l1-03",
+            "type": "matchPairs",
+            "instruction": "Match the red flag to why it matters",
+            "pairs": [
+              [
+                "Fake-looking citation",
+                "Source may not exist"
+              ],
+              [
+                "Exact stats, no source",
+                "Numbers may be invented"
+              ],
+              [
+                "Very recent event",
+                "AI may be out of date"
+              ],
+              [
+                "Overly confident tone",
+                "Confidence isn’t accuracy"
+              ]
+            ],
+            "explanation": "Learn the red flags and you’ll catch most errors.",
+            "concepts": [
+              "hallucination"
+            ],
+            "difficulty": [
+              "constrained"
+            ]
+          },
+          {
+            "id": "r-u1-l1-04",
+            "type": "spotProblem",
+            "instruction": "Tap the likely hallucination",
+            "context": "Tell me about the Eiffel Tower.",
+            "segments": [
+              "The Eiffel Tower is in Paris, France.",
+              "It was completed in 1889 for the World’s Fair.",
+              "It was originally painted bright green and moved from London in 1902.",
+              "It’s one of the most visited monuments in the world."
+            ],
+            "answer": [
+              2
+            ],
+            "explanation": "It was never moved from London! Mixed-in false claims look just as confident as true ones.",
+            "concepts": [
+              "hallucination"
+            ],
+            "difficulty": [
+              "constrained"
+            ]
+          },
+          {
+            "id": "r-u1-l1-05",
+            "type": "fillBlank",
+            "instruction": "Fill in the blank",
+            "context": "You want the AI to be honest about uncertainty.",
+            "template": "If you’re not sure, ___ instead of guessing.",
+            "options": [
+              "say “I don’t know”",
+              "make something up",
+              "change the topic"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Giving the AI permission to say “I don’t know” reduces made-up answers.",
+            "concepts": [
+              "hallucination"
+            ],
+            "difficulty": [
+              "constrained"
+            ]
+          },
+          {
+            "id": "r-u1-l1-06",
+            "type": "spotProblem",
+            "instruction": "Tap the suspicious claim",
+            "context": "Give me a fun fact about honey.",
+            "segments": [
+              "Honey can last a very long time when sealed.",
+              "Archaeologists have found edible honey in ancient Egyptian tombs.",
+              "According to a 2019 Harvard study, honey cures 94% of colds within an hour.",
+              "Bees visit many flowers to make a spoonful."
+            ],
+            "answer": [
+              2
+            ],
+            "explanation": "A precise stat with a big-name source and a miracle result is a strong red flag.",
+            "concepts": [
+              "hallucination"
+            ],
+            "difficulty": [
+              "production"
+            ]
+          },
+          {
+            "id": "r-u1-l1-07",
+            "type": "pickPrompt",
+            "instruction": "Pick the prompt that reduces hallucinations",
+            "context": "You’re researching a health topic.",
+            "options": [
+              "Tell me everything about vitamin D.",
+              "Explain vitamin D basics. Flag anything uncertain, and tell me which claims I should verify with a doctor or official health site."
+            ],
+            "answer": [
+              1
+            ],
+            "explanation": "Asking the AI to flag uncertainty makes verification easier.",
+            "concepts": [
+              "hallucination",
+              "verification"
+            ],
+            "difficulty": [
+              "production"
+            ]
+          },
+          {
+            "id": "r-u1-l1-08",
+            "type": "multipleChoice",
+            "instruction": "True or false: if an AI sounds confident, it’s correct.",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": [
+              1
+            ],
+            "explanation": "Exactly. Confidence is style, not proof.",
+            "concepts": [
+              "hallucination"
+            ],
+            "difficulty": [
+              "confidence"
+            ]
+          }
+        ]
+      },
+      "caps": {
+        "client": "rork-ios@4fe5be7",
+        "formatVersion": 1,
+        "stepTypes": {
+          "multipleChoice": 1,
+          "pickPrompt": 1,
+          "fillBlank": 1,
+          "buildPrompt": 1,
+          "spotProblem": 1,
+          "matchPairs": 1
+        }
+      },
+      "decode": "ok",
+      "expect": {
+        "playable": true,
+        "reason": null,
+        "steps": [
+          {
+            "id": "r-u1-l1-01",
+            "action": "play"
+          },
+          {
+            "id": "r-u1-l1-02",
+            "action": "play"
+          },
+          {
+            "id": "r-u1-l1-03",
+            "action": "play"
+          },
+          {
+            "id": "r-u1-l1-04",
+            "action": "play"
+          },
+          {
+            "id": "r-u1-l1-05",
+            "action": "play"
+          },
+          {
+            "id": "r-u1-l1-06",
+            "action": "play"
+          },
+          {
+            "id": "r-u1-l1-07",
+            "action": "play"
+          },
+          {
+            "id": "r-u1-l1-08",
+            "action": "play"
+          }
+        ]
+      },
+      "note": null
+    },
+    {
+      "name": "rork research.json r-u1-l2",
+      "lesson": {
+        "id": "r-u1-l2",
+        "title": "Verify facts",
+        "symbol": "checkmark.shield.fill",
+        "exercises": [
+          {
+            "id": "r-u1-l2-01",
+            "type": "multipleChoice",
+            "instruction": "Best way to verify an important AI claim?",
+            "options": [
+              "Check it against a trusted primary source",
+              "Ask the same AI if it’s sure",
+              "Assume it’s right",
+              "Ask a friend to guess"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Go to the original: official sites, papers, reputable news.",
+            "concepts": [
+              "verification"
+            ],
+            "difficulty": [
+              "recognition"
+            ]
+          },
+          {
+            "id": "r-u1-l2-02",
+            "type": "matchPairs",
+            "instruction": "Match the claim to the best source",
+            "pairs": [
+              [
+                "Medicine dosage",
+                "Doctor or official health site"
+              ],
+              [
+                "Tax rule",
+                "Government tax website"
+              ],
+              [
+                "Company revenue",
+                "Annual report"
+              ],
+              [
+                "Train times",
+                "Rail operator website"
+              ]
+            ],
+            "explanation": "Different claims need different trusted sources.",
+            "concepts": [
+              "verification"
+            ],
+            "difficulty": [
+              "recognition"
+            ]
+          },
+          {
+            "id": "r-u1-l2-03",
+            "type": "pickPrompt",
+            "instruction": "Pick the better research prompt",
+            "context": "You need facts for a school report.",
+            "options": [
+              "Write my report on renewable energy.",
+              "List 5 key facts about solar energy growth, and for each tell me what kind of source I should check to verify it."
+            ],
+            "answer": [
+              1
+            ],
+            "explanation": "Use AI to map the topic, then verify at the source.",
+            "concepts": [
+              "verification"
+            ],
+            "difficulty": [
+              "constrained"
+            ]
+          },
+          {
+            "id": "r-u1-l2-04",
+            "type": "fillBlank",
+            "instruction": "Fill in the blank",
+            "context": "Checking a link the AI gave you.",
+            "template": "Before citing an AI-provided source, ___.",
+            "options": [
+              "open it and confirm it says what the AI claims",
+              "trust the title",
+              "just copy the URL"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Links can be broken, wrong or invented. Read them yourself.",
+            "concepts": [
+              "verification"
+            ],
+            "difficulty": [
+              "constrained"
+            ]
+          },
+          {
+            "id": "r-u1-l2-05",
+            "type": "buildPrompt",
+            "instruction": "Build the prompt",
+            "context": "Ask for checkable answers.",
+            "tiles": [
+              "Answer briefly",
+              "and list",
+              "what I should verify",
+              "with an official source"
+            ],
+            "distractors": [
+              "never check",
+              "blue"
+            ],
+            "explanation": "Ask the AI to help you verify, not replace verification.",
+            "concepts": [
+              "verification"
+            ],
+            "difficulty": [
+              "constrained"
+            ]
+          },
+          {
+            "id": "r-u1-l2-06",
+            "type": "spotProblem",
+            "instruction": "Tap the claim you should verify first",
+            "context": "Summary of a news story an AI gave you:",
+            "segments": [
+              "A new park is opening downtown.",
+              "It will include a playground and walking trails.",
+              "The mayor said it will cut city crime by exactly 61%.",
+              "The opening date has not been announced."
+            ],
+            "answer": [
+              2
+            ],
+            "explanation": "A precise, dramatic number attributed to a person needs checking.",
+            "concepts": [
+              "verification"
+            ],
+            "difficulty": [
+              "production"
+            ]
+          },
+          {
+            "id": "r-u1-l2-07",
+            "type": "multipleChoice",
+            "instruction": "“Lateral reading” means…",
+            "options": [
+              "Opening other sources to check who’s behind a claim",
+              "Reading sideways on your phone",
+              "Skimming quickly",
+              "Reading only the headline"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Fact-checkers leave the page to see what others say about a source.",
+            "concepts": [
+              "verification"
+            ],
+            "difficulty": [
+              "production"
+            ]
+          },
+          {
+            "id": "r-u1-l2-08",
+            "type": "multipleChoice",
+            "instruction": "AI is great for ___ and you are responsible for ___.",
+            "options": [
+              "first drafts and overviews / checking facts",
+              "final legal advice / nothing",
+              "nothing / everything"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "That’s the winning partnership. AI drafts, you verify.",
+            "concepts": [
+              "verification"
+            ],
+            "difficulty": [
+              "confidence"
+            ]
+          }
+        ]
+      },
+      "caps": {
+        "client": "rork-ios@4fe5be7",
+        "formatVersion": 1,
+        "stepTypes": {
+          "multipleChoice": 1,
+          "pickPrompt": 1,
+          "fillBlank": 1,
+          "buildPrompt": 1,
+          "spotProblem": 1,
+          "matchPairs": 1
+        }
+      },
+      "decode": "ok",
+      "expect": {
+        "playable": true,
+        "reason": null,
+        "steps": [
+          {
+            "id": "r-u1-l2-01",
+            "action": "play"
+          },
+          {
+            "id": "r-u1-l2-02",
+            "action": "play"
+          },
+          {
+            "id": "r-u1-l2-03",
+            "action": "play"
+          },
+          {
+            "id": "r-u1-l2-04",
+            "action": "play"
+          },
+          {
+            "id": "r-u1-l2-05",
+            "action": "play"
+          },
+          {
+            "id": "r-u1-l2-06",
+            "action": "play"
+          },
+          {
+            "id": "r-u1-l2-07",
+            "action": "play"
+          },
+          {
+            "id": "r-u1-l2-08",
+            "action": "play"
+          }
+        ]
+      },
+      "note": null
+    },
+    {
+      "name": "fixture lesson-v1-all-native-types.json",
+      "lesson": {
+        "id": "fx-native-l1",
+        "formatVersion": 1,
+        "title": "Brief an assistant",
+        "symbol": "text.bubble.fill",
+        "requires": {
+          "stepTypes": {
+            "multipleChoice": 1,
+            "pickPrompt": 1,
+            "fillBlank": 1,
+            "buildPrompt": 1,
+            "spotProblem": 1,
+            "matchPairs": 1
+          }
+        },
+        "exercises": [
+          {
+            "id": "fx-native-l1-s1",
+            "type": "multipleChoice",
+            "typeVersion": 1,
+            "instruction": "What does a role in a prompt do?",
+            "options": [
+              "It picks which AI company answers",
+              "It sets whose expertise the reply draws on",
+              "It makes the reply shorter"
+            ],
+            "answer": [
+              1
+            ],
+            "explanation": "A role such as “Act as a hiring manager” frames the voice and priorities of the reply.",
+            "concepts": [
+              "role"
+            ],
+            "difficulty": [
+              "recognition"
+            ]
+          },
+          {
+            "id": "fx-native-l1-s2",
+            "type": "pickPrompt",
+            "instruction": "Pick the better prompt",
+            "context": "You need a status update for your manager.",
+            "options": [
+              "Status update",
+              "Write a three-line status update for my manager on the Q3 report: done, next, blocked."
+            ],
+            "answer": [
+              1
+            ],
+            "explanation": "The second prompt names the audience, the topic and the format.",
+            "concepts": [
+              "task",
+              "format"
+            ],
+            "difficulty": [
+              "constrained"
+            ]
+          },
+          {
+            "id": "fx-native-l1-s3",
+            "type": "fillBlank",
+            "instruction": "Complete the prompt",
+            "context": "You want a short answer you can paste into a chat.",
+            "template": "Summarise this report ___.",
+            "options": [
+              "in two sentences",
+              "nicely",
+              "for me"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "A length limit tells the AI exactly how much to write.",
+            "concepts": [
+              "format"
+            ],
+            "difficulty": [
+              "constrained"
+            ]
+          },
+          {
+            "id": "fx-native-l1-s4",
+            "type": "buildPrompt",
+            "instruction": "Build the prompt in order",
+            "context": "Ask for a meeting agenda.",
+            "tiles": [
+              "Act as a project lead.",
+              "Draft a 30-minute agenda",
+              "for Monday's kickoff,",
+              "as a numbered list."
+            ],
+            "distractors": [
+              "Be creative.",
+              "Make it good."
+            ],
+            "explanation": "Role, task, context and format: each tile adds one thing the AI needs.",
+            "concepts": [
+              "role",
+              "task"
+            ],
+            "difficulty": [
+              "production"
+            ]
+          },
+          {
+            "id": "fx-native-l1-s5",
+            "type": "spotProblem",
+            "instruction": "Tap the sentence that can't come from the sales table.",
+            "context": "Summarise Q3 sales for the board. Use only the attached table.",
+            "segments": [
+              "Q3 revenue was €4.2M, up 6% on Q2.",
+              "Growth came mostly from the Nordics.",
+              "Analysts expect the market to double by 2028.",
+              "Customer churn held at 2.1%."
+            ],
+            "answer": [
+              2
+            ],
+            "explanation": "A market forecast can't come from a sales table, so the AI added it.",
+            "concepts": [
+              "verification"
+            ],
+            "difficulty": [
+              "recognition"
+            ]
+          },
+          {
+            "id": "fx-native-l1-s6",
+            "type": "matchPairs",
+            "instruction": "Match each prompt part to what it does",
+            "pairs": [
+              [
+                "Role",
+                "Whose expertise to use"
+              ],
+              [
+                "Task",
+                "What to produce"
+              ],
+              [
+                "Format",
+                "How the answer looks"
+              ],
+              [
+                "Audience",
+                "Who will read it"
+              ]
+            ],
+            "explanation": "Each part answers one question the AI would otherwise guess.",
+            "concepts": [
+              "role",
+              "task",
+              "format"
+            ],
+            "difficulty": [
+              "confidence"
+            ]
+          }
+        ]
+      },
+      "caps": {
+        "client": "rork-ios@4fe5be7",
+        "formatVersion": 1,
+        "stepTypes": {
+          "multipleChoice": 1,
+          "pickPrompt": 1,
+          "fillBlank": 1,
+          "buildPrompt": 1,
+          "spotProblem": 1,
+          "matchPairs": 1
+        }
+      },
+      "decode": "ok",
+      "expect": {
+        "playable": true,
+        "reason": null,
+        "steps": [
+          {
+            "id": "fx-native-l1-s1",
+            "action": "play"
+          },
+          {
+            "id": "fx-native-l1-s2",
+            "action": "play"
+          },
+          {
+            "id": "fx-native-l1-s3",
+            "action": "play"
+          },
+          {
+            "id": "fx-native-l1-s4",
+            "action": "play"
+          },
+          {
+            "id": "fx-native-l1-s5",
+            "action": "play"
+          },
+          {
+            "id": "fx-native-l1-s6",
+            "action": "play"
+          }
+        ]
+      },
+      "note": null
+    },
+    {
+      "name": "fixture lesson-v1-minimal.json",
+      "lesson": {
+        "id": "fx-minimal-l1",
+        "formatVersion": 1,
+        "title": "One question",
+        "symbol": "questionmark.circle",
+        "requires": {
+          "stepTypes": {
+            "multipleChoice": 1
+          }
+        },
+        "exercises": [
+          {
+            "id": "fx-minimal-l1-s1",
+            "type": "multipleChoice",
+            "instruction": "Which reply should you check before you use it?",
+            "options": [
+              "Any reply that states a fact",
+              "Only replies that look wrong"
+            ],
+            "answer": [
+              0
+            ],
+            "explanation": "Fluent replies can still be wrong, so check every factual claim.",
+            "concepts": [
+              "verification"
+            ]
+          }
+        ]
+      },
+      "caps": {
+        "client": "rork-ios@4fe5be7",
+        "formatVersion": 1,
+        "stepTypes": {
+          "multipleChoice": 1,
+          "pickPrompt": 1,
+          "fillBlank": 1,
+          "buildPrompt": 1,
+          "spotProblem": 1,
+          "matchPairs": 1
+        }
+      },
+      "decode": "ok",
+      "expect": {
+        "playable": true,
+        "reason": null,
+        "steps": [
+          {
+            "id": "fx-minimal-l1-s1",
+            "action": "play"
+          }
+        ]
+      },
+      "note": null
+    },
+    {
+      "name": "fixture lesson-v1-fallback.json",
+      "lesson": {
+        "id": "fx-fallback-l1",
+        "formatVersion": 1,
+        "title": "Order the steps",
+        "symbol": "list.number",
+        "requires": {
+          "stepTypes": {
+            "multipleChoice": 1
+          }
+        },
+        "exercises": [
+          {
+            "id": "fx-fallback-l1-s1",
+            "type": "multipleChoice",
+            "instruction": "Which step must stay with a person?",
+            "options": [
+              "Reading the client note",
+              "Drafting the reply",
+              "Approving the reply before it is sent"
+            ],
+            "answer": [
+              2
+            ],
+            "explanation": "Approval stays with a person: they own what gets sent.",
+            "concepts": [
+              "human-in-loop"
+            ],
+            "difficulty": [
+              "recognition"
+            ]
+          },
+          {
+            "id": "fx-fallback-l1-s2",
+            "type": "buildPrompt",
+            "instruction": "Put the workflow in order",
+            "tiles": [
+              "Read the note,",
+              "draft the reply,",
+              "a person approves it,",
+              "then send."
+            ],
+            "distractors": [
+              "Send the first draft."
+            ],
+            "explanation": "Mapping the steps first shows which one must stay with a person.",
+            "concepts": [
+              "human-in-loop"
+            ],
+            "difficulty": [
+              "constrained"
+            ]
+          },
+          {
+            "id": "fx-fallback-l1-s3",
+            "type": "multipleChoice",
+            "fallbackFor": "fx-fallback-l1-s2",
+            "instruction": "Which order keeps a person in control?",
+            "options": [
+              "Draft, send, then approve",
+              "Read, draft, approve, then send",
+              "Approve, read, draft, then send"
+            ],
+            "answer": [
+              1
+            ],
+            "explanation": "Approval comes after the draft and before anything is sent.",
+            "concepts": [
+              "human-in-loop"
+            ],
+            "difficulty": [
+              "constrained"
+            ]
+          }
+        ]
+      },
+      "caps": {
+        "client": "rork-ios@4fe5be7",
+        "formatVersion": 1,
+        "stepTypes": {
+          "multipleChoice": 1,
+          "pickPrompt": 1,
+          "fillBlank": 1,
+          "buildPrompt": 1,
+          "spotProblem": 1,
+          "matchPairs": 1
+        }
+      },
+      "decode": "ok",
+      "expect": {
+        "playable": true,
+        "reason": null,
+        "steps": [
+          {
+            "id": "fx-fallback-l1-s1",
+            "action": "play"
+          },
+          {
+            "id": "fx-fallback-l1-s2",
+            "action": "play"
+          },
+          {
+            "id": "fx-fallback-l1-s3",
+            "action": "hidden"
+          }
+        ]
+      },
+      "note": null
+    }
+  ]
+}

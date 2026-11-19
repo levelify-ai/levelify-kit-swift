@@ -1,0 +1,12 @@
+{
+  "client": "rork-ios@4fe5be7",
+  "formatVersion": 1,
+  "stepTypes": {
+    "multipleChoice": 1,
+    "pickPrompt": 1,
+    "fillBlank": 1,
+    "buildPrompt": 1,
+    "spotProblem": 1,
+    "matchPairs": 1
+  }
+}

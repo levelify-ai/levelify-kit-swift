@@ -1,0 +1,87 @@
+{
+  "$comment": "The host loads a step type this build doesn't render. The Player answers player.error step_type_unknown and never player.ready; the host shows the failed state at once, without waiting for the timer.",
+  "hostBridgeVersions": [
+    1
+  ],
+  "messages": [
+    {
+      "from": "player",
+      "message": {
+        "bridge": 1,
+        "id": "00000000-0000-4000-8000-000000000001",
+        "type": "player.hello",
+        "payload": {
+          "bridgeVersions": [
+            1
+          ],
+          "playerVersion": "0.1.0",
+          "stepTypes": {
+            "simulation": 1
+          }
+        }
+      }
+    },
+    {
+      "from": "host",
+      "message": {
+        "bridge": 1,
+        "id": "00000000-0000-4000-8000-000000000002",
+        "type": "host.hello",
+        "replyTo": "00000000-0000-4000-8000-000000000001",
+        "payload": {
+          "bridge": 1,
+          "host": "levelifykit-ios/0.1.0",
+          "platform": "ios",
+          "locale": "en",
+          "settings": {
+            "reduceMotion": false,
+            "textScale": 1,
+            "colorScheme": "dark",
+            "sound": true,
+            "haptics": true
+          }
+        }
+      }
+    },
+    {
+      "from": "host",
+      "message": {
+        "bridge": 1,
+        "id": "00000000-0000-4000-8000-000000000901",
+        "type": "step.load",
+        "payload": {
+          "lessonId": "aut-l2-u1-l1",
+          "lessonVersion": "9c1e5b0a7d3f4e2c8b6a1d0f9e8c7b6a5d4c3b2a1f0e9d8c7b6a5f4e3d2c1b0a",
+          "step": {
+            "id": "aut-l2-u1-l1-e9",
+            "type": "roleplay",
+            "instruction": "Talk it through",
+            "explanation": "x",
+            "concepts": [
+              "process-map"
+            ]
+          },
+          "media": {}
+        }
+      }
+    },
+    {
+      "from": "player",
+      "message": {
+        "bridge": 1,
+        "id": "00000000-0000-4000-8000-000000000902",
+        "type": "player.error",
+        "payload": {
+          "code": "step_type_unknown",
+          "stepId": "aut-l2-u1-l1-e9"
+        },
+        "replyTo": "00000000-0000-4000-8000-000000000901"
+      }
+    }
+  ],
+  "expect": {
+    "agreedBridge": 1,
+    "playerReady": false,
+    "hostState": "failed"
+  }
+}

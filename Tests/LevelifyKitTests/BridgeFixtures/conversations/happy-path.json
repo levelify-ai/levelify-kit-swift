@@ -1,0 +1,158 @@
+{
+  "$comment": "Handshake, load, result, lock, unload (docs/08 §7.4's sequence). The host speaks [1].",
+  "hostBridgeVersions": [
+    1
+  ],
+  "messages": [
+    {
+      "from": "player",
+      "message": {
+        "bridge": 1,
+        "id": "00000000-0000-4000-8000-000000000001",
+        "type": "player.hello",
+        "payload": {
+          "bridgeVersions": [
+            1
+          ],
+          "playerVersion": "0.1.0",
+          "stepTypes": {
+            "simulation": 1
+          }
+        }
+      }
+    },
+    {
+      "from": "host",
+      "message": {
+        "bridge": 1,
+        "id": "00000000-0000-4000-8000-000000000002",
+        "type": "host.hello",
+        "replyTo": "00000000-0000-4000-8000-000000000001",
+        "payload": {
+          "bridge": 1,
+          "host": "levelifykit-ios/0.1.0",
+          "platform": "ios",
+          "locale": "en",
+          "settings": {
+            "reduceMotion": false,
+            "textScale": 1,
+            "colorScheme": "dark",
+            "sound": true,
+            "haptics": true
+          }
+        }
+      }
+    },
+    {
+      "from": "host",
+      "message": {
+        "bridge": 1,
+        "id": "00000000-0000-4000-8000-000000000003",
+        "type": "step.load",
+        "payload": {
+          "lessonId": "aut-l2-u1-l1",
+          "lessonVersion": "9c1e5b0a7d3f4e2c8b6a1d0f9e8c7b6a5d4c3b2a1f0e9d8c7b6a5f4e3d2c1b0a",
+          "step": {
+            "id": "aut-l2-u1-l1-sim",
+            "type": "simulation",
+            "instruction": "Follow the status map before a handoff",
+            "explanation": "The map is read the note, draft, Priya approves, then send. The approve step stays with a person.",
+            "concepts": [
+              "process-map"
+            ],
+            "simulationId": "agent-loop",
+            "parameters": {
+              "task": "Monday status",
+              "map": "read the note, draft, Priya approves, send"
+            },
+            "expectedInsight": "The approve step stays with a person.",
+            "staticFrames": [
+              "Read the Monday note. The review is Thursday, the fee is £480, and no payment is recorded.",
+              "Draft the status from the Monday note. Use the Thursday review, the £480 fee, and no payment.",
+              "Priya approves the draft. The approve step stays with Priya.",
+              "Send only after the approve step. Do not send in place of that step."
+            ]
+          },
+          "media": {}
+        }
+      }
+    },
+    {
+      "from": "player",
+      "message": {
+        "bridge": 1,
+        "id": "00000000-0000-4000-8000-000000000011",
+        "type": "player.ready",
+        "payload": {
+          "stepId": "aut-l2-u1-l1-sim"
+        },
+        "replyTo": "00000000-0000-4000-8000-000000000003"
+      }
+    },
+    {
+      "from": "player",
+      "message": {
+        "bridge": 1,
+        "id": "00000000-0000-4000-8000-000000000015",
+        "type": "haptic",
+        "payload": {
+          "kind": "tap"
+        }
+      }
+    },
+    {
+      "from": "player",
+      "message": {
+        "bridge": 1,
+        "id": "00000000-0000-4000-8000-000000000012",
+        "type": "step.result",
+        "payload": {
+          "stepId": "aut-l2-u1-l1-sim",
+          "correct": true,
+          "response": {
+            "simulationId": "agent-loop",
+            "order": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "runs": 1
+          },
+          "durationMs": 41250
+        },
+        "replyTo": "00000000-0000-4000-8000-000000000003"
+      }
+    },
+    {
+      "from": "host",
+      "message": {
+        "bridge": 1,
+        "id": "00000000-0000-4000-8000-000000000008",
+        "type": "step.lock",
+        "payload": {
+          "stepId": "aut-l2-u1-l1-sim"
+        }
+      }
+    },
+    {
+      "from": "host",
+      "message": {
+        "bridge": 1,
+        "id": "00000000-0000-4000-8000-000000000009",
+        "type": "step.unload",
+        "payload": {
+          "stepId": "aut-l2-u1-l1-sim"
+        }
+      }
+    }
+  ],
+  "expect": {
+    "agreedBridge": 1,
+    "playerReady": true,
+    "result": {
+      "stepId": "aut-l2-u1-l1-sim",
+      "correct": true
+    }
+  }
+}

@@ -1,0 +1,1 @@
+Fixtures copied from packages/contract/fixtures/bridge at a91dfcd (player/d3b-player-bridge). Swift tests read this tree so they run the same cases as the contract.

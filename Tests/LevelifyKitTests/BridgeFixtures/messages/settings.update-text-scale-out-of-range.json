@@ -1,0 +1,14 @@
+{
+  "bridge": 1,
+  "id": "00000000-0000-4000-8000-000000000035",
+  "type": "settings.update",
+  "payload": {
+    "settings": {
+      "reduceMotion": false,
+      "textScale": 12,
+      "colorScheme": "dark",
+      "sound": true,
+      "haptics": true
+    }
+  }
+}

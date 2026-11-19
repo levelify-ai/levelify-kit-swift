@@ -1,0 +1,8 @@
+{
+  "bridge": 1,
+  "id": "step-lock-1",
+  "type": "step.lock",
+  "payload": {
+    "stepId": "aut-l2-u1-l1-sim"
+  }
+}

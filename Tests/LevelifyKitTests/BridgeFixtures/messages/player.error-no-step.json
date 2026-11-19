@@ -1,0 +1,9 @@
+{
+  "bridge": 1,
+  "id": "00000000-0000-4000-8000-000000000019",
+  "type": "player.error",
+  "payload": {
+    "code": "internal",
+    "stepId": null
+  }
+}

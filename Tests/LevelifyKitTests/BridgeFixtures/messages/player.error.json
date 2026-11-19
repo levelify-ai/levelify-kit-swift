@@ -1,0 +1,10 @@
+{
+  "bridge": 1,
+  "id": "00000000-0000-4000-8000-000000000018",
+  "type": "player.error",
+  "payload": {
+    "code": "step_type_unknown",
+    "stepId": "aut-l2-u1-l1-e9"
+  },
+  "replyTo": "00000000-0000-4000-8000-000000000003"
+}

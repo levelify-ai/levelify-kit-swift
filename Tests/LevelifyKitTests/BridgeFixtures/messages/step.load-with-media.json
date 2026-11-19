@@ -1,0 +1,33 @@
+{
+  "bridge": 1,
+  "id": "00000000-0000-4000-8000-000000000005",
+  "type": "step.load",
+  "payload": {
+    "lessonId": "aut-l2-u1-l1",
+    "lessonVersion": "9c1e5b0a7d3f4e2c8b6a1d0f9e8c7b6a5d4c3b2a1f0e9d8c7b6a5f4e3d2c1b0a",
+    "step": {
+      "id": "aut-l2-u1-l1-sim",
+      "type": "simulation",
+      "instruction": "Follow the status map before a handoff",
+      "explanation": "The map is read the note, draft, Priya approves, then send. The approve step stays with a person.",
+      "concepts": [
+        "process-map"
+      ],
+      "simulationId": "agent-loop",
+      "parameters": {
+        "task": "Monday status",
+        "map": "read the note, draft, Priya approves, send"
+      },
+      "expectedInsight": "The approve step stays with a person.",
+      "staticFrames": [
+        "Read the Monday note. The review is Thursday, the fee is £480, and no payment is recorded.",
+        "Draft the status from the Monday note. Use the Thursday review, the £480 fee, and no payment.",
+        "Priya approves the draft. The approve step stays with Priya.",
+        "Send only after the approve step. Do not send in place of that step."
+      ]
+    },
+    "media": {
+      "4be1d2c3b4a5968778695a4b3c2d1e0f1a2b3c4d5e6f708192a3b4c5d6e7f809": "levelify-player://player/media/4be1d2c3b4a5968778695a4b3c2d1e0f1a2b3c4d5e6f708192a3b4c5d6e7f809.png"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "bridge": 1,
+  "id": "6F1B2C3D-4E5F-4A6B-8C7D-9E0F1A2B3C4D",
+  "type": "host.hello",
+  "replyTo": "0A1B2C3D-4E5F-4061-8728-394A5B6C7D8E",
+  "payload": {
+    "bridge": 1,
+    "host": "levelifykit-ios/0.1.0",
+    "platform": "ios",
+    "locale": "en-GB",
+    "settings": {
+      "reduceMotion": true,
+      "textScale": 1.35,
+      "colorScheme": "light",
+      "sound": true,
+      "haptics": true
+    }
+  }
+}

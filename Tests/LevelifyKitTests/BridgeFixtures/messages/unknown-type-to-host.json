@@ -1,0 +1,9 @@
+{
+  "bridge": 1,
+  "id": "00000000-0000-4000-8000-000000000021",
+  "type": "player.progress",
+  "payload": {
+    "stepId": "aut-l2-u1-l1-sim",
+    "fraction": 0.5
+  }
+}

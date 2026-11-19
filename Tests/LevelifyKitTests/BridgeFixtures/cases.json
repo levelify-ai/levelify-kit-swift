@@ -1,0 +1,331 @@
+{
+  "$comment": "Every bridge fixture and the verdict a receiver must reach (packages/contract/src/bridge.ts, parseMessage). direction is the receiving side: toPlayer (the Player receives it) or toHost (the host receives it). LevelifyKit's Swift tests run the same list.",
+  "cases": [
+    {
+      "file": "messages/host.hello.json",
+      "direction": "toPlayer",
+      "expect": "accept",
+      "type": "host.hello"
+    },
+    {
+      "file": "messages/host.hello-uppercase-ids.json",
+      "direction": "toPlayer",
+      "expect": "accept",
+      "type": "host.hello",
+      "note": "Swift's UUID().uuidString is upper case"
+    },
+    {
+      "file": "messages/step.load.json",
+      "direction": "toPlayer",
+      "expect": "accept",
+      "type": "step.load",
+      "note": "the test lesson's simulation step, exactly as authored"
+    },
+    {
+      "file": "messages/step.load-bundled-lesson.json",
+      "direction": "toPlayer",
+      "expect": "accept",
+      "type": "step.load",
+      "note": "a lesson bundled in the app has no version"
+    },
+    {
+      "file": "messages/step.load-with-media.json",
+      "direction": "toPlayer",
+      "expect": "accept",
+      "type": "step.load"
+    },
+    {
+      "file": "messages/step.load-unknown-fields.json",
+      "direction": "toPlayer",
+      "expect": "accept",
+      "type": "step.load",
+      "note": "unknown fields in the envelope and the payload are ignored"
+    },
+    {
+      "file": "messages/settings.update.json",
+      "direction": "toPlayer",
+      "expect": "accept",
+      "type": "settings.update"
+    },
+    {
+      "file": "messages/step.lock.json",
+      "direction": "toPlayer",
+      "expect": "accept",
+      "type": "step.lock"
+    },
+    {
+      "file": "messages/step.unload.json",
+      "direction": "toPlayer",
+      "expect": "accept",
+      "type": "step.unload"
+    },
+    {
+      "file": "messages/player.hello.json",
+      "direction": "toHost",
+      "expect": "accept",
+      "type": "player.hello"
+    },
+    {
+      "file": "messages/player.hello-two-versions.json",
+      "direction": "toHost",
+      "expect": "accept",
+      "type": "player.hello",
+      "note": "a later build that speaks 1 and 2 still says hello with bridge 1"
+    },
+    {
+      "file": "messages/player.ready.json",
+      "direction": "toHost",
+      "expect": "accept",
+      "type": "player.ready"
+    },
+    {
+      "file": "messages/step.result.json",
+      "direction": "toHost",
+      "expect": "accept",
+      "type": "step.result"
+    },
+    {
+      "file": "messages/step.result-wrong.json",
+      "direction": "toHost",
+      "expect": "accept",
+      "type": "step.result"
+    },
+    {
+      "file": "messages/step.result-ungraded.json",
+      "direction": "toHost",
+      "expect": "accept",
+      "type": "step.result"
+    },
+    {
+      "file": "messages/haptic.json",
+      "direction": "toHost",
+      "expect": "accept",
+      "type": "haptic"
+    },
+    {
+      "file": "messages/sound.json",
+      "direction": "toHost",
+      "expect": "accept",
+      "type": "sound"
+    },
+    {
+      "file": "messages/a11y.announce.json",
+      "direction": "toHost",
+      "expect": "accept",
+      "type": "a11y.announce"
+    },
+    {
+      "file": "messages/player.error.json",
+      "direction": "toHost",
+      "expect": "accept",
+      "type": "player.error"
+    },
+    {
+      "file": "messages/player.error-no-step.json",
+      "direction": "toHost",
+      "expect": "accept",
+      "type": "player.error"
+    },
+    {
+      "file": "messages/unknown-type.json",
+      "direction": "toPlayer",
+      "expect": "ignore",
+      "code": "unknown_type",
+      "note": "a later host's message type: ignored and logged"
+    },
+    {
+      "file": "messages/unknown-type-to-host.json",
+      "direction": "toHost",
+      "expect": "ignore",
+      "code": "unknown_type"
+    },
+    {
+      "file": "messages/haptic-unknown-kind.json",
+      "direction": "toHost",
+      "expect": "ignore",
+      "code": "unknown_value",
+      "note": "a new haptic kind is not a breaking change"
+    },
+    {
+      "file": "messages/sound-unknown-kind.json",
+      "direction": "toHost",
+      "expect": "ignore",
+      "code": "unknown_value"
+    },
+    {
+      "file": "messages/not-json.txt",
+      "direction": "toPlayer",
+      "expect": "reject",
+      "code": "not_json"
+    },
+    {
+      "file": "messages/array.json",
+      "direction": "toPlayer",
+      "expect": "reject",
+      "code": "bad_envelope"
+    },
+    {
+      "file": "messages/missing-id.json",
+      "direction": "toPlayer",
+      "expect": "reject",
+      "code": "bad_envelope"
+    },
+    {
+      "file": "messages/bad-id.json",
+      "direction": "toPlayer",
+      "expect": "reject",
+      "code": "bad_envelope"
+    },
+    {
+      "file": "messages/bad-reply-to.json",
+      "direction": "toHost",
+      "expect": "reject",
+      "code": "bad_envelope"
+    },
+    {
+      "file": "messages/bridge-as-string.json",
+      "direction": "toPlayer",
+      "expect": "reject",
+      "code": "bad_envelope"
+    },
+    {
+      "file": "messages/bridge-zero.json",
+      "direction": "toPlayer",
+      "expect": "reject",
+      "code": "bad_envelope"
+    },
+    {
+      "file": "messages/payload-missing.json",
+      "direction": "toPlayer",
+      "expect": "reject",
+      "code": "bad_envelope"
+    },
+    {
+      "file": "messages/host.hello-bridge-differs.json",
+      "direction": "toPlayer",
+      "expect": "reject",
+      "code": "bad_envelope",
+      "note": "host.hello's envelope bridge is the chosen version"
+    },
+    {
+      "file": "messages/player.hello-bridge-2.json",
+      "direction": "toHost",
+      "expect": "reject",
+      "code": "bad_envelope",
+      "note": "player.hello always carries bridge 1"
+    },
+    {
+      "file": "messages/wrong-direction-to-player.json",
+      "direction": "toPlayer",
+      "expect": "reject",
+      "code": "wrong_direction"
+    },
+    {
+      "file": "messages/wrong-direction-to-host.json",
+      "direction": "toHost",
+      "expect": "reject",
+      "code": "wrong_direction"
+    },
+    {
+      "file": "messages/host.hello-no-settings.json",
+      "direction": "toPlayer",
+      "expect": "reject",
+      "code": "bad_payload"
+    },
+    {
+      "file": "messages/settings.update-bad-color-scheme.json",
+      "direction": "toPlayer",
+      "expect": "reject",
+      "code": "bad_payload"
+    },
+    {
+      "file": "messages/settings.update-text-scale-out-of-range.json",
+      "direction": "toPlayer",
+      "expect": "reject",
+      "code": "bad_payload"
+    },
+    {
+      "file": "messages/step.load-bad-lesson-version.json",
+      "direction": "toPlayer",
+      "expect": "reject",
+      "code": "bad_payload"
+    },
+    {
+      "file": "messages/step.load-step-without-id.json",
+      "direction": "toPlayer",
+      "expect": "reject",
+      "code": "bad_payload"
+    },
+    {
+      "file": "messages/step.load-media-other-host.json",
+      "direction": "toPlayer",
+      "expect": "reject",
+      "code": "bad_payload",
+      "note": "media is served from the player host, so the CSP's 'self' covers it"
+    },
+    {
+      "file": "messages/step.load-media-network-url.json",
+      "direction": "toPlayer",
+      "expect": "reject",
+      "code": "bad_payload"
+    },
+    {
+      "file": "messages/step.lock-bad-step-id.json",
+      "direction": "toPlayer",
+      "expect": "reject",
+      "code": "bad_payload"
+    },
+    {
+      "file": "messages/player.hello-no-versions.json",
+      "direction": "toHost",
+      "expect": "reject",
+      "code": "bad_payload"
+    },
+    {
+      "file": "messages/step.result-free-text.json",
+      "direction": "toHost",
+      "expect": "reject",
+      "code": "bad_payload",
+      "note": "a response never carries free text"
+    },
+    {
+      "file": "messages/step.result-too-large-response.json",
+      "direction": "toHost",
+      "expect": "reject",
+      "code": "bad_payload",
+      "note": "response over 2 KB"
+    },
+    {
+      "file": "messages/step.result-correct-as-string.json",
+      "direction": "toHost",
+      "expect": "reject",
+      "code": "bad_payload"
+    },
+    {
+      "file": "messages/step.result-negative-duration.json",
+      "direction": "toHost",
+      "expect": "reject",
+      "code": "bad_payload"
+    },
+    {
+      "file": "messages/a11y.announce-too-long.json",
+      "direction": "toHost",
+      "expect": "reject",
+      "code": "bad_payload",
+      "note": "over 200 characters"
+    },
+    {
+      "file": "messages/player.error-unknown-code.json",
+      "direction": "toHost",
+      "expect": "reject",
+      "code": "bad_payload"
+    },
+    {
+      "file": "messages/too-large.json",
+      "direction": "toPlayer",
+      "expect": "reject",
+      "code": "too_large",
+      "note": "over 65,536 bytes"
+    }
+  ]
+}

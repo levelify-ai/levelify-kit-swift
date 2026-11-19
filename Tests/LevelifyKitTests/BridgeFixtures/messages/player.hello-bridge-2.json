@@ -1,0 +1,12 @@
+{
+  "bridge": 2,
+  "id": "00000000-0000-4000-8000-000000000030",
+  "type": "player.hello",
+  "payload": {
+    "bridgeVersions": [
+      2
+    ],
+    "playerVersion": "0.9.0",
+    "stepTypes": {}
+  }
+}

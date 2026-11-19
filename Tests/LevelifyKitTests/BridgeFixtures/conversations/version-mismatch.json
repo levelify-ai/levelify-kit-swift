@@ -1,0 +1,31 @@
+{
+  "$comment": "The Player speaks [1], the host only [2]. They share none: the host sends nothing, never gets player.ready, and reports the Player unavailable (step_skip player_unavailable).",
+  "hostBridgeVersions": [
+    2
+  ],
+  "messages": [
+    {
+      "from": "player",
+      "message": {
+        "bridge": 1,
+        "id": "00000000-0000-4000-8000-000000000001",
+        "type": "player.hello",
+        "payload": {
+          "bridgeVersions": [
+            1
+          ],
+          "playerVersion": "0.1.0",
+          "stepTypes": {
+            "simulation": 1
+          }
+        }
+      }
+    }
+  ],
+  "expect": {
+    "agreedBridge": null,
+    "playerReady": false,
+    "hostSends": [],
+    "hostState": "failed"
+  }
+}
